@@ -1,0 +1,33 @@
+JavaServer Page Tag Library JSP标准标签库
+for 用于简化跟替换jsp页面上的java代码。
+how use
+导入jar包--->引入标签库<%@ tablib %> --->用标签
+common tags:
+    if
+                test 接收boolean表达式 true 显示标签体内容，否则不显示。
+                一般情况下，test属性值会结合el表达式一起使用
+    choose (java中的switch理解下)
+            <c:choose>
+                <%--    <c:when test="${num1 == 1}">星期1</c:when>--%>
+                <c:when test="${num2 == 2}">星期2</c:when>
+                <c:when test="${num3 == 3}">星期3</c:when>
+                <c:when test="${num4 == 4}">星期4</c:when>
+                <c:when test="${num5 == 5}">星期5</c:when>
+                <c:when test="${num6 == 6}">星期6</c:when>
+                <c:when test="${num7 == 7}">星期天</c:when>
+                <c:otherwise>出问题了</c:otherwise>
+            </c:choose>
+    foreach(for 遍历集合)
+                 <%--
+                    for 1,完成重复操作。
+                        begin:开始值 end:结束值 var：临时变量 step步长（i+？）
+                        varStatus：循环变量状态-->index容器中元素的索引，从零开始 count-->循环次数，从1开始。
+                        2，遍历容器
+                         items：容器对象
+                                var 容器中元素的临时变量
+                                varStatus 循环状态对象
+                                     index 容器中元素的索引，从0开始
+                                     count 循环次数，从1开始
+                --%>
+                <c:forEach begin="1" end="10" var="i" step="1">
+                </c:forEach>

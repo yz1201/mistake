@@ -1,0 +1,39 @@
+1，JSP -->JAVA Server Pages Java服务端页面技术 即一个特殊的页面，其中可以指定html标签，还能玩java代码~ 参见index.jsp
+静态资源，代码设置页面相结合--->动态资源。
+在静态页面的基础上，添加需要与用户交互的动态元素，
+2，过程-->服务端解析请求信息，是否包含index.jsp资源，找到后将该资源转换为.java文件，编码生成字节码文件，由字节码文件提供访问（即jsp本质上就是一个servlet）。
+   index_jsp extends HttpJspBase --->   HttpJspBase extends HttpServlet implements HttpJspPage
+3.JSP 脚本， jsp定义java代码的方式-->
+    <%  java code（eg：any） %>  定义的代码在service 方法内，可以定义很多东西？完全当在类中的service方法去用。
+    <%! java code（eg：i=3） %>  定义成员？ 即用来定义成员方法或者成员变量。静态代码块。不常用哦
+    <%= java code（eg： i） %>---> out.write(i);  =为输出语句，将其中的值输出
+4. JSP内置对象，<% %> 直接在这个脚本中用的，req resp out 等9个对象。 out = pagOut.getOut();?
+out 与 resp.getWriter() 区别，resp.getWriter()比out优先输出？--->tomcat服务端在响应之前，先找resp缓冲区数据，再找out缓冲区数据。
+5.指令-->for 配置jsp页面，导入资源文件。
+格式--<%@ 指令名称 key1=value1 key2=value2... %> eg: jsp页面开头 page指令
+     分类：指令一 page--配置jsp页面
+     常见属性
+     contentType 即设置响应体的contentType(resp.setContentType()) 设置当前页面的mimetype跟字符集
+     低级ide可以用pageEncoding声明页面编码使用的字符集,contentType中声明的不生效
+     import--导包。
+     errorPage --设置默认的服务器错误页面
+     isErrorPage -- 标识当前页面是否为错误页面，如果为true，可调用exception对象，获取服务器错误原因，记录日志。默认为false。
+          指令二 include 页面包含的，导入页面的资源文件，举例就是抽取相同的页面资源成为公共的页面，其他页面include这一部分就可以用了。
+          <%@ include file=" " %>
+          taglib  导入资源。---导入标签库
+          <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+6，注释
+<!-- --> 注释html 页面部分
+<%-- --%> 注释java代码部分 客户端看不见这部分注释，因为在被解析后是out.write("\t");
+7，内置对象全解 不需new直接使用的对象
+                                                                前四个
+req                                        HttpServlet        一次请求访问的多个资源间共享数据（转发）
+session                                    HttpSession        一次会话的多个请求间
+application                                ServletContext     所有用户共享数据
+pageContext                                PageContext        可以用来在当前页面共享数据 可以用来获取其他八个对象
+
+resp                                       HttpResponse       响应对象
+page                                       Object             当前页面对象（该servlet对象） this
+out                                        JspWriter          输出字符流，数据输出到页面上
+config                                     ServletConfig      Servlet的配置对象？
+exception(isErrorPage="true"时可使用)       Throwable          异常对象

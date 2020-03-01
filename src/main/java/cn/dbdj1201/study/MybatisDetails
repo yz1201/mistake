@@ -1,0 +1,43 @@
+    mybatis是一个优秀的持久层框架，内部封装了jdbc，我们只需要关注sql本身，而不需要花费精力去处理加载驱动，创建链接，创建statement等繁杂的过程。
+    mybatis通过xml或注解的方式将要执行的各种statement配置起来，通过java对象跟statement中sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql语句，并将结果映射为java对象并返回。
+    采用ORM（Object Relational Mapping 对象关系映射）思想解决了实体跟数据库映射问题，对jdbc进行了封装，屏蔽了jdbc api底层访问细节。
+       User(domain)  <--                    -->    User(tab_user)
+        uId    <--实体类属性名应跟数据库表字段名保持一致-->   uid
+
+    从自定义mybatis开始学习。
+
+    mybatis入门
+            环境搭建：
+                    1，创建maven工程导入gav坐标
+                    2，创建实体类跟dao接口
+                    3，创建mybatis的主配置文件 SqlMapConfig.xml
+                    4，创建映射配置文件        INovelistDao.xml
+            注意：
+                    1，创建INovelistDao.xml,跟INovelistDao.java时是之前数据持久化的起名习惯，mybatis也可以叫INovelistMapper
+                    2，包跟目录不同，只能新建一个目录，eg：新建目录com.tyz，只有一层。
+                    3，mybatis的映射配置文件位置必须跟dao接口的包结构相同
+                    4，映射配置文件的mapper标签namespace属性的取值必须是dao接口的全限定类目
+                    5，映射配置文件的操作配置，id属性的取值必须是dao接口的方法名。
+
+    mybatis入门案例
+                    1，读取配置文件
+                    2，创建SqlSessionFactory
+                    3，创建SqlSession
+                    4，创建Dao接口的代理对象
+                    5，执行dao中方法
+                    6，释放资源
+                 注意：resource中的目录要一级一级写，而且定位的分隔符得用/
+
+             注解入门，给映射文件xml删了，dao接口中@Select("相应sql语句")，SqlMapConfig.xml中 mapper  设置class属性为相应的dao接口，class属性的值写 全类名。
+    自定义mybatis分析： mybatis在使用代理dao的方式实现增删改查时做了？ 1，代理对象创建.2，代理对象执行方法。这个过程不就是反射?
+    工作流程（生命周期？）：
+            1，SqlSessionFactoryBuilder 接收SqlMapConfig.xml输入文件流，解析构建出SqlSessionFactory对象。
+            2，SqlSessionFactorty读取SqlMapConfig.xml中连接数据库跟mapper映射信息，用于生产真正操作数据库的SqlSession对象
+            3，SqlSession对象两大作用，生成接口代理对象   定义通用增删改查方法。
+            注：无论哪个分支，除了连接数据库信息，还需要得到sql语句。
+            4，一：在SqlSessionImpl对象的getMapper方法中分两步实现，
+                    新建Connection对象，此对象信息，由xml文件中的驱动跟url 用户信息可完成。
+                    通过jdk代理模式创建代理对象，作为getMapper方法的返回值，在代理对象时用到并执行具体的sql语句。
+               二：在SqlSessionImpl对象中提供selectList（）方法，不过mybatis其实是有多种方法的，eg：selectOne，insert。。。这些方法也得分步
+                      ①：创建conn对象 ②：拿到sql语句，进行crud。
+            5，封装结果集，不管是实现类中实现还是用代理对象，都要对结果集进行封装，这里先记住需要提供javabean的字节码类型。

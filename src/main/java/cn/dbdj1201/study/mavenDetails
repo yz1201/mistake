@@ -1,0 +1,19 @@
+maven：for 依赖管理，项目构建。
+
+maven 标准项目目录结构：
+ src/main/java          核心代码部分
+ src/main/resources     配置文件部分
+ src/test/java          测试代码部分
+ src/test/resources     测试配置文件
+ src/main/webapp        页面资源，css, js ,html, 图片 jsp? etc
+
+ maven 中常用命令：
+mvn clean   删除target目录，删除项目编译信息。
+mvn compile 编译项目核心代码，置于target目录下
+mvn test    编译test测试代码跟核心代码，置于target目录下
+mvn package 打包命令，编译项目代码，按pom.xml文件指定格式打包。
+mvn install 做了compile，test，package命令所做的事情，而且还把打包的文件放在了本地仓库
+
+maven生命周期：编译 compile，测试 test，打包 package，安装 install，发布 deploy(部署)。默认生命周期
+遇事不决mvn clean？ 清理生命周期；
+站点生命周期？

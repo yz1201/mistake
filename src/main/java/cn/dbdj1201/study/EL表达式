@@ -1,0 +1,25 @@
+Expression Language 表达式语言；
+作用？ 用于替换jsp页面中java代码的编码
+用法--> ${}
+attention :
+如何忽略EL表达式呢 page指令设置属性 isELIgnored 或者 \$()  转义？
+for 运算，获取值
+${ 3>4 }
+包括的运算符-- 算术运算符  + - * /（div） %（mod）
+              比较运算符  > < == >= <= !=
+              逻辑运算符 && || ! and or not
+              空运算符 empty  用于判断字符串，集合，数组对象是否为null，或者长度是否为0 ${empty list/map}
+                      not empty 表示是否不为null，或者长度>0;
+
+获取值                              application即java中的ServletContext
+ el只能从域对象中获取值(session req application pageContext) 后+Scope pageScope requestScope applicationScope  sessionScope
+ 直接拿到值的方法
+ 1 ${域名.键名} eg:req 中存了name=张三 ${requestScope.name}
+ 2 ${键名} 表示从最小域中查找该键名对应的值，直到找到为止。
+ 获取对象，List集合，Map集合的值
+  对象： ${域名称.键名.属性} 本质上会调用getter方法，若键名唯一，建议省略域名称。
+  List集合 ${域名.键名[索引]}
+  Map集合 ${域名.键名.key名}  或者 ${域名.键名["key名称"]}
+
+ 隐式对象 el中可以直接用的对象，11个
+ pageContext： 用来干嘛呢？去获取jsp其他八个内置对象吧，好起来了。
