@@ -1,6 +1,7 @@
 package cn.dbdj1201.mistake.mapper;
 
 import cn.dbdj1201.mistake.domain.Novelist;
+import cn.dbdj1201.mistake.domain.QueryVo;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.After;
@@ -9,6 +10,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author tyz1201
@@ -22,13 +25,13 @@ public class INovelistMapperTest {
     @Before
     public void init() {
         cfgXmlIn = this.getClass().getClassLoader().getResourceAsStream("SqlMapConfig.xml");
-        sqlSession = new SqlSessionFactoryBuilder().build(cfgXmlIn).openSession();
+        sqlSession = new SqlSessionFactoryBuilder().build(cfgXmlIn).openSession(true); //自动提交事务
         novelistMapper = sqlSession.getMapper(INovelistMapper.class);
     }
 
     @After
     public void destroy() {
-        sqlSession.commit();
+//        sqlSession.commit();
         sqlSession.close();
         try {
             cfgXmlIn.close();
@@ -46,7 +49,7 @@ public class INovelistMapperTest {
     @Test
     public void saveNovelist() {
         Novelist novelist = new Novelist();
-        novelist.setNname("test3");
+        novelist.setNname("test4");
         novelist.setLifetime("4141-04-01");
         novelist.setNovel("Jokes");
         novelist.setAddress("home");
@@ -71,6 +74,8 @@ public class INovelistMapperTest {
 
     @Test
     public void findById() {
+        Novelist novelist = novelistMapper.findById(5);
+        System.out.println("5th novelist-->" + novelist);
     }
 
     @Test
@@ -82,5 +87,24 @@ public class INovelistMapperTest {
     @Test
     public void findTotal() {
         System.out.println(novelistMapper.findTotal());
+    }
+
+    @Test
+    public void findNovelistByCondition() {
+        Novelist novelist = new Novelist();
+        novelist.setNname("test1");
+        novelistMapper.findNovelistByCondition(novelist).forEach(System.out::println);
+
+    }
+
+    @Test
+    public void findNovelistInIds() {
+        List<Integer> ids = new ArrayList<>();
+        ids.add(2);
+        ids.add(3);
+        ids.add(4);
+        QueryVo vo = new QueryVo();
+        vo.setIds(ids);
+        novelistMapper.findNovelistInIds(vo).forEach(System.out::println);
     }
 }

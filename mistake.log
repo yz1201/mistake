@@ -374,3 +374,832 @@
 2020-03-01 18:02:19,008 534    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@8458f04]
 2020-03-01 18:02:19,009 535    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@8458f04]
 2020-03-01 18:02:19,009 535    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 138776324 to pool.
+2020-03-01 18:03:50,109 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 18:03:50,138 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 18:03:50,139 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 18:03:50,139 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 18:03:50,139 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 18:03:50,206 97     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 18:03:50,552 443    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2050339061.
+2020-03-01 18:03:50,553 444    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a35b0f5]
+2020-03-01 18:03:50,560 451    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==>  Preparing: insert into novelist(nname, lifetime, novel, address) values(?,?,?,?) 
+2020-03-01 18:03:50,626 517    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==> Parameters: test4(String), 4141-04-01(String), Jokes(String), home(String)
+2020-03-01 18:03:50,643 534    [           main] DEBUG r.INovelistMapper.saveNovelist  - <==    Updates: 1
+2020-03-01 18:03:50,644 535    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a35b0f5]
+2020-03-01 18:03:50,673 564    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a35b0f5]
+2020-03-01 18:03:50,673 564    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a35b0f5]
+2020-03-01 18:03:50,674 565    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 2050339061 to pool.
+2020-03-01 22:03:03,046 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:03:03,072 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:03:03,072 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:03:03,072 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:03:03,072 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:03:03,177 131    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:03:03,617 571    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 335708295.
+2020-03-01 22:03:03,617 571    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@14028087]
+2020-03-01 22:03:03,623 577    [           main] DEBUG apper.INovelistMapper.findById  - ==>  Preparing: select * from novelist where nid = ? 
+2020-03-01 22:03:03,669 623    [           main] DEBUG apper.INovelistMapper.findById  - ==> Parameters: 5(Integer)
+2020-03-01 22:03:03,704 658    [           main] DEBUG apper.INovelistMapper.findById  - <==      Total: 1
+2020-03-01 22:03:03,705 659    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@14028087]
+2020-03-01 22:03:03,706 660    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@14028087]
+2020-03-01 22:03:03,706 660    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 335708295 to pool.
+2020-03-01 22:04:49,076 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:04:49,152 76     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:04:49,152 76     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:04:49,152 76     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:04:49,152 76     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:04:49,314 238    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:04:49,865 789    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 548554586.
+2020-03-01 22:04:49,866 790    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@20b2475a]
+2020-03-01 22:04:49,880 804    [           main] DEBUG apper.INovelistMapper.findById  - ==>  Preparing: select * from novelist where nid = ? 
+2020-03-01 22:04:49,946 870    [           main] DEBUG apper.INovelistMapper.findById  - ==> Parameters: 5(Integer)
+2020-03-01 22:04:49,990 914    [           main] DEBUG apper.INovelistMapper.findById  - <==      Total: 1
+2020-03-01 22:04:49,992 916    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@20b2475a]
+2020-03-01 22:04:49,993 917    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@20b2475a]
+2020-03-01 22:04:49,993 917    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 548554586 to pool.
+2020-03-01 22:05:18,322 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:05:18,405 83     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:05:18,405 83     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:05:18,406 84     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:05:18,406 84     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:05:36,211 17889  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:05:37,380 19058  [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1293203138.
+2020-03-01 22:05:37,381 19059  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d14b6c2]
+2020-03-01 22:05:37,410 19088  [           main] DEBUG apper.INovelistMapper.findById  - ==>  Preparing: select * from novelist where nid = ? 
+2020-03-01 22:05:37,805 19483  [           main] DEBUG apper.INovelistMapper.findById  - ==> Parameters: 5(Integer)
+2020-03-01 22:05:38,161 19839  [           main] DEBUG apper.INovelistMapper.findById  - <==      Total: 1
+2020-03-01 22:05:38,164 19842  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d14b6c2]
+2020-03-01 22:05:38,166 19844  [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d14b6c2]
+2020-03-01 22:05:38,166 19844  [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1293203138 to pool.
+2020-03-01 22:07:05,157 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:07:05,249 92     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:07:05,250 93     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:07:05,250 93     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:07:05,250 93     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:11:20,956 255799 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:11:22,189 257032 [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1293226111.
+2020-03-01 22:11:22,190 257033 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d15107f]
+2020-03-01 22:11:22,221 257064 [           main] DEBUG apper.INovelistMapper.findById  - ==>  Preparing: select * from novelist where nid = ? 
+2020-03-01 22:11:56,361 291204 [           main] DEBUG apper.INovelistMapper.findById  - ==> Parameters: 5(Integer)
+2020-03-01 22:12:12,057 306900 [           main] DEBUG apper.INovelistMapper.findById  - <==      Total: 1
+2020-03-01 22:12:33,134 327977 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d15107f]
+2020-03-01 22:12:33,136 327979 [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d15107f]
+2020-03-01 22:12:33,136 327979 [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1293226111 to pool.
+2020-03-01 22:13:17,486 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:13:17,521 35     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:13:17,521 35     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:13:17,522 36     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:13:17,522 36     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:13:17,591 105    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:13:17,959 473    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1000966072.
+2020-03-01 22:13:17,960 474    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@3ba987b8]
+2020-03-01 22:13:17,967 481    [           main] DEBUG apper.INovelistMapper.findById  - ==>  Preparing: select * from novelist where nid = ? 
+2020-03-01 22:13:18,028 542    [           main] DEBUG apper.INovelistMapper.findById  - ==> Parameters: 5(Integer)
+2020-03-01 22:13:18,072 586    [           main] DEBUG apper.INovelistMapper.findById  - <==      Total: 1
+2020-03-01 22:13:18,073 587    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@3ba987b8]
+2020-03-01 22:13:18,075 589    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@3ba987b8]
+2020-03-01 22:13:18,075 589    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1000966072 to pool.
+2020-03-01 22:31:56,648 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:31:56,678 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:31:56,678 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:31:56,679 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:31:56,679 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:31:56,751 103    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:31:57,103 455    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 91912419.
+2020-03-01 22:31:57,103 455    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@57a78e3]
+2020-03-01 22:31:57,110 462    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 22:31:57,171 523    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 22:31:57,209 561    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 9
+2020-03-01 22:31:57,212 564    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@57a78e3]
+2020-03-01 22:31:57,213 565    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@57a78e3]
+2020-03-01 22:31:57,213 565    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 91912419 to pool.
+2020-03-01 22:32:51,562 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:32:51,587 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:32:51,588 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:32:51,588 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:32:51,588 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:32:51,652 90     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:32:52,013 451    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2095486832.
+2020-03-01 22:32:52,013 451    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7ce69770]
+2020-03-01 22:32:52,020 458    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==>  Preparing: insert into novelist(nname, lifetime, novel, address) values(?,?,?,?) 
+2020-03-01 22:32:52,084 522    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==> Parameters: test1(String), 4141-04-01(String), Jokes(String), home(String)
+2020-03-01 22:32:52,105 543    [           main] DEBUG r.INovelistMapper.saveNovelist  - <==    Updates: 1
+2020-03-01 22:32:52,106 544    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7ce69770]
+2020-03-01 22:32:52,125 563    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7ce69770]
+2020-03-01 22:32:52,126 564    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7ce69770]
+2020-03-01 22:32:52,126 564    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 2095486832 to pool.
+2020-03-01 22:33:03,207 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:33:03,239 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:03,239 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:03,239 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:03,239 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:03,306 99     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:33:03,659 452    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1855610584.
+2020-03-01 22:33:03,659 452    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:03,667 460    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==>  Preparing: insert into novelist(nname, lifetime, novel, address) values(?,?,?,?) 
+2020-03-01 22:33:03,727 520    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==> Parameters: test2(String), 4141-04-01(String), Jokes(String), home(String)
+2020-03-01 22:33:03,734 527    [           main] DEBUG r.INovelistMapper.saveNovelist  - <==    Updates: 1
+2020-03-01 22:33:03,735 528    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:03,765 558    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:03,767 560    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:03,767 560    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1855610584 to pool.
+2020-03-01 22:33:12,206 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:33:12,232 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:12,234 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:12,234 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:12,234 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:12,303 97     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:33:12,668 462    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1855610584.
+2020-03-01 22:33:12,669 463    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:12,677 471    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==>  Preparing: insert into novelist(nname, lifetime, novel, address) values(?,?,?,?) 
+2020-03-01 22:33:12,751 545    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==> Parameters: test3(String), 4141-04-01(String), Jokes(String), home(String)
+2020-03-01 22:33:12,758 552    [           main] DEBUG r.INovelistMapper.saveNovelist  - <==    Updates: 1
+2020-03-01 22:33:12,758 552    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:12,808 602    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:12,809 603    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6e9a5ed8]
+2020-03-01 22:33:12,809 603    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1855610584 to pool.
+2020-03-01 22:33:20,983 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:33:21,010 27     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:21,011 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:21,011 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:21,011 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:33:21,076 93     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:33:21,461 478    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1873091796.
+2020-03-01 22:33:21,461 478    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6fa51cd4]
+2020-03-01 22:33:21,470 487    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==>  Preparing: insert into novelist(nname, lifetime, novel, address) values(?,?,?,?) 
+2020-03-01 22:33:21,537 554    [           main] DEBUG r.INovelistMapper.saveNovelist  - ==> Parameters: test4(String), 4141-04-01(String), Jokes(String), home(String)
+2020-03-01 22:33:21,557 574    [           main] DEBUG r.INovelistMapper.saveNovelist  - <==    Updates: 1
+2020-03-01 22:33:21,558 575    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6fa51cd4]
+2020-03-01 22:33:21,598 615    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6fa51cd4]
+2020-03-01 22:33:21,599 616    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6fa51cd4]
+2020-03-01 22:33:21,600 617    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1873091796 to pool.
+2020-03-01 22:50:52,106 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 22:50:52,137 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:50:52,137 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:50:52,137 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:50:52,137 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 22:50:52,168 62     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 22:50:52,168 62     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 22:50:52,168 62     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 22:50:52,168 62     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 22:50:52,168 62     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 22:50:52,168 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,168 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,309 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 22:50:52,324 218    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 22:50:52,340 234    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 22:50:52,340 234    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 22:50:52,340 234    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 22:50:52,340 234    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 22:50:52,340 234    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 22:50:52,340 234    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 22:50:52,340 234    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 22:50:52,434 328    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 22:50:52,856 750    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1704491411.
+2020-03-01 22:50:52,856 750    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@65987993]
+2020-03-01 22:50:52,856 750    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 22:50:52,918 812    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 22:50:52,981 875    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 22:50:52,981 875    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@65987993]
+2020-03-01 22:50:52,981 875    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@65987993]
+2020-03-01 22:50:52,981 875    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1704491411 to pool.
+2020-03-01 23:19:48,868 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:19:48,898 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:19:48,899 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:19:48,899 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:19:48,899 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:19:48,906 38     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:19:48,906 38     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:19:48,907 39     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:19:48,907 39     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:19:48,908 40     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:19:48,909 41     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:48,909 41     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:48,988 120    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:19:48,990 122    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:19:48,991 123    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:48,991 123    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:48,991 123    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:48,992 124    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:19:48,993 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:48,993 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:19:48,994 126    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:19:48,996 128    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:19:48,999 131    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:19:48,999 131    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:19:49,001 133    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:19:49,002 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:49,002 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:49,003 135    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:19:49,004 136    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:19:49,004 136    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:19:49,004 136    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:49,005 137    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:49,005 137    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:19:49,006 138    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:19:49,006 138    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:19:49,007 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:19:49,008 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:19:49,010 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:19:49,010 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:19:49,011 143    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:19:49,015 147    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:19:49,016 148    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:19:49,016 148    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:19:49,017 149    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:19:49,119 251    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:19:49,520 652    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1314838582.
+2020-03-01 23:19:49,520 652    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4e5ed836]
+2020-03-01 23:19:49,526 658    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:19:49,581 713    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:19:49,638 770    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:19:49,641 773    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4e5ed836]
+2020-03-01 23:19:49,643 775    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@4e5ed836]
+2020-03-01 23:19:49,643 775    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1314838582 to pool.
+2020-03-01 23:21:56,945 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.2020-03-01 23:21:56,979 34     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.2020-03-01 23:21:56,980 35     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.2020-03-01 23:21:56,980 35     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.2020-03-01 23:21:56,980 35     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.2020-03-01 23:21:56,989 44     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS2020-03-01 23:21:56,990 45     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.2020-03-01 23:21:56,990 45     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile2020-03-01 23:21:56,991 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.2020-03-01 23:21:56,991 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS2020-03-01 23:21:56,992 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:56,992 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:57,082 137    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl2020-03-01 23:21:57,083 138    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class2020-03-01 23:21:57,084 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:57,084 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,085 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,085 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class2020-03-01 23:21:57,086 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,086 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class2020-03-01 23:21:57,086 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class2020-03-01 23:21:57,088 143    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z2020-03-01 23:21:57,091 146    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class2020-03-01 23:21:57,091 146    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class2020-03-01 23:21:57,094 149    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �2020-03-01 23:21:57,095 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:57,095 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:57,097 152    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl2020-03-01 23:21:57,097 152    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class2020-03-01 23:21:57,098 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper2020-03-01 23:21:57,098 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,098 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,099 154    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class2020-03-01 23:21:57,100 155    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl2020-03-01 23:21:57,102 157    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class2020-03-01 23:21:57,102 157    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class2020-03-01 23:21:57,103 158    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }2020-03-01 23:21:57,105 160    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class2020-03-01 23:21:57,105 160    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class2020-03-01 23:21:57,106 161    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 2020-03-01 23:21:57,111 166    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]2020-03-01 23:21:57,112 167    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]2020-03-01 23:21:57,112 167    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]2020-03-01 23:21:57,113 168    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]2020-03-01 23:21:57,216 271    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection2020-03-01 23:21:57,560 615    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 770010802.2020-03-01 23:21:57,561 616    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]2020-03-01 23:21:57,568 623    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 2020-03-01 23:21:57,619 674    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 2020-03-01 23:21:57,674 729    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 82020-03-01 23:21:57,677 732    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]2020-03-01 23:21:57,678 733    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]2020-03-01 23:21:57,679 734    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 770010802 to pool.2020-03-01 23:22:19,234 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:22:19,266 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:19,266 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:19,267 33     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:19,267 33     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:19,275 41     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:22:19,275 41     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:22:19,276 42     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:22:19,277 43     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:22:19,278 44     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:22:19,279 45     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,279 45     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,371 137    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:22:19,372 138    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:22:19,373 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,373 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,374 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,375 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:22:19,375 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,376 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:22:19,376 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:22:19,377 143    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:22:19,381 147    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:22:19,381 147    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:22:19,384 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:22:19,385 151    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,386 152    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,387 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:22:19,387 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:22:19,388 154    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:19,388 154    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,389 155    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,390 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:22:19,391 157    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:19,391 157    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:22:19,391 157    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:22:19,393 159    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:22:19,395 161    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:22:19,395 161    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:22:19,396 162    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:22:19,401 167    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:22:19,402 168    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:22:19,402 168    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:22:19,403 169    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:22:19,506 272    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:22:19,917 683    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1293677337.
+2020-03-01 23:22:19,918 684    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d1bf319]
+2020-03-01 23:22:19,926 692    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:22:19,982 748    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:22:20,036 802    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:22:20,039 805    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d1bf319]
+2020-03-01 23:22:20,040 806    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@4d1bf319]
+2020-03-01 23:22:20,041 807    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1293677337 to pool.
+2020-03-01 23:22:53,471 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:22:53,500 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:53,500 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:53,500 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:53,501 30     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:22:53,507 36     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:22:53,507 36     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:22:53,508 37     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:22:53,509 38     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:22:53,509 38     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:22:53,510 39     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,510 39     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,585 114    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:22:53,585 114    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:22:53,586 115    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,586 115    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,587 116    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,588 117    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:22:53,588 117    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,589 118    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:22:53,589 118    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:22:53,591 120    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:22:53,594 123    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:22:53,594 123    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:22:53,598 127    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:22:53,599 128    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,599 128    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,600 129    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:22:53,601 130    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:22:53,602 131    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:22:53,602 131    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,602 131    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,604 133    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:22:53,605 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:22:53,605 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:22:53,605 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:22:53,607 136    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:22:53,608 137    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:22:53,609 138    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:22:53,610 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:22:53,614 143    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:22:53,615 144    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:22:53,615 144    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:22:53,616 145    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:22:53,714 243    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:22:54,104 633    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 770010802.
+2020-03-01 23:22:54,105 634    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:22:54,112 641    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:22:54,186 715    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:22:54,244 773    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:22:54,247 776    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:22:54,249 778    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:22:54,249 778    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 770010802 to pool.
+2020-03-01 23:24:59,224 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:24:59,240 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:24:59,240 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:24:59,240 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:24:59,240 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:24:59,255 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:24:59,255 31     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:24:59,255 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:24:59,255 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:24:59,255 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:24:59,255 31     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,255 31     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,334 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:24:59,349 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:24:59,349 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:24:59,349 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:24:59,349 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:24:59,349 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:24:59,427 203    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:24:59,817 593    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 597307515.
+2020-03-01 23:24:59,817 593    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@239a307b]
+2020-03-01 23:24:59,817 593    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:24:59,895 671    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:24:59,942 718    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:24:59,942 718    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@239a307b]
+2020-03-01 23:24:59,942 718    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@239a307b]
+2020-03-01 23:24:59,942 718    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 597307515 to pool.
+2020-03-01 23:25:41,874 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:25:41,905 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:41,905 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:41,905 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:41,905 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:41,921 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:25:41,921 47     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:25:41,921 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:25:41,921 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:25:41,921 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:25:41,921 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:41,921 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:25:42,014 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:25:42,030 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:25:42,046 172    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:25:42,046 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:25:42,046 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:25:42,046 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:25:42,046 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:25:42,171 297    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:25:42,686 812    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 770010802.
+2020-03-01 23:25:42,686 812    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:25:42,702 828    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:25:42,780 906    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:25:42,827 953    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:25:42,827 953    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:25:42,827 953    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2de56eb2]
+2020-03-01 23:25:42,827 953    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 770010802 to pool.
+2020-03-01 23:25:57,842 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:25:57,858 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:57,858 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:57,858 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:57,858 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-01 23:25:57,874 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:25:57,874 32     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:25:57,874 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:25:57,874 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:25:57,874 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:25:57,874 32     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,874 32     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,967 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:25:57,983 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:25:57,999 157    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:25:57,999 157    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:25:57,999 157    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:25:57,999 157    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:25:58,092 250    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:25:58,467 625    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1139814130.
+2020-03-01 23:25:58,467 625    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@43f02ef2]
+2020-03-01 23:25:58,483 641    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:25:58,545 703    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:25:58,577 735    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:25:58,577 735    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@43f02ef2]
+2020-03-01 23:25:58,592 750    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@43f02ef2]
+2020-03-01 23:25:58,592 750    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1139814130 to pool.
+2020-03-01 23:27:20,862 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-01 23:27:20,862 0      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-01 23:27:20,862 0      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-01 23:27:20,862 0      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-01 23:27:20,862 0      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-01 23:27:20,862 0      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-01 23:27:20,862 0      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,862 0      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-01 23:27:20,956 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 }
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-01 23:27:20,971 109    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 # ! " findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-01 23:27:20,987 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-01 23:27:20,987 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-01 23:27:20,987 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-01 23:27:20,987 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-01 23:27:21,081 219    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-01 23:27:21,456 594    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cb107fd]
+2020-03-01 23:27:21,471 609    [           main] DEBUG mapper.INovelistMapper.findAll  - ==>  Preparing: select * from novelist 
+2020-03-01 23:27:21,534 672    [           main] DEBUG mapper.INovelistMapper.findAll  - ==> Parameters: 
+2020-03-01 23:27:21,581 719    [           main] DEBUG mapper.INovelistMapper.findAll  - <==      Total: 8
+2020-03-01 23:27:21,581 719    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cb107fd]
+2020-03-01 23:27:21,581 719    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cb107fd]
+2020-03-02 00:04:27,005 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-02 00:04:27,021 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:04:27,021 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:04:27,037 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:04:27,037 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:04:27,037 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-02 00:04:27,037 32     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-02 00:04:27,037 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-02 00:04:27,037 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-02 00:04:27,037 32     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-02 00:04:27,037 32     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,037 32     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-02 00:04:27,115 110    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:04:27,130 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 - + , findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-02 00:04:27,130 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-02 00:04:27,130 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-02 00:04:27,130 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-02 00:04:27,130 125    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-02 00:04:27,333 328    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-02 00:04:27,693 688    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1926673338.
+2020-03-02 00:04:27,708 703    [           main] DEBUG Mapper.findNovelistByCondition  - ==>  Preparing: select * from novelist where 1 = 1 nname = ? 
+2020-03-02 00:04:27,771 766    [           main] DEBUG Mapper.findNovelistByCondition  - ==> Parameters: test1(String)
+2020-03-02 00:04:27,771 766    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@72d6b3ba]
+2020-03-02 00:04:27,771 766    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1926673338 to pool.
+2020-03-02 00:05:03,658 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-02 00:05:03,689 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:05:03,689 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:05:03,689 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:05:03,689 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:05:03,705 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-02 00:05:03,705 47     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-02 00:05:03,705 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-02 00:05:03,705 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-02 00:05:03,705 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-02 00:05:03,705 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,705 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,783 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:05:03,799 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:05:03,814 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 - + , findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-02 00:05:03,814 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-02 00:05:03,814 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-02 00:05:03,814 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-02 00:05:03,814 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-02 00:05:04,002 344    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-02 00:05:04,424 766    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 515809288.
+2020-03-02 00:05:04,424 766    [           main] DEBUG Mapper.findNovelistByCondition  - ==>  Preparing: select * from novelist where 1 = 1 and nname = ? 
+2020-03-02 00:05:04,517 859    [           main] DEBUG Mapper.findNovelistByCondition  - ==> Parameters: test1(String)
+2020-03-02 00:05:04,611 953    [           main] DEBUG Mapper.findNovelistByCondition  - <==      Total: 1
+2020-03-02 00:05:04,627 969    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@1ebea008]
+2020-03-02 00:05:04,627 969    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 515809288 to pool.
+2020-03-02 00:24:08,197 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-02 00:24:08,228 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:08,228 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:08,228 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:08,228 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:08,243 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-02 00:24:08,243 46     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-02 00:24:08,243 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-02 00:24:08,243 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-02 00:24:08,243 46     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-02 00:24:08,243 46     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,243 46     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,322 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:24:08,322 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-02 00:24:08,322 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,322 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,322 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:24:08,337 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:24:08,353 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:24:08,353 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:24:08,353 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:24:08,353 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 6 4 5 findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-02 00:24:08,353 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-02 00:24:08,353 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-02 00:24:08,353 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-02 00:24:08,353 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-02 00:24:08,540 343    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-02 00:24:08,884 687    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1595938139.
+2020-03-02 00:24:08,900 703    [           main] DEBUG velistMapper.findNovelistInIds  - ==>  Preparing: select * from novelist WHERE id in ( ? ? ? ) 
+2020-03-02 00:24:08,978 781    [           main] DEBUG velistMapper.findNovelistInIds  - ==> Parameters: 2(Integer), 3(Integer), 4(Integer)
+2020-03-02 00:24:08,978 781    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5f20155b]
+2020-03-02 00:24:08,978 781    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1595938139 to pool.
+2020-03-02 00:24:44,385 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-02 00:24:44,416 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:44,416 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:44,416 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:44,416 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:24:44,416 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-02 00:24:44,416 31     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-02 00:24:44,416 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-02 00:24:44,416 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-02 00:24:44,416 31     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-02 00:24:44,416 31     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,416 31     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:24:44,510 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:24:44,526 141    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 6 4 5 findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-02 00:24:44,541 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-02 00:24:44,541 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-02 00:24:44,541 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-02 00:24:44,541 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-02 00:24:44,729 344    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-02 00:24:45,104 719    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1620823990.
+2020-03-02 00:24:45,120 735    [           main] DEBUG velistMapper.findNovelistInIds  - ==>  Preparing: select * from novelist WHERE nid in ( ? ? ? ) 
+2020-03-02 00:24:45,182 797    [           main] DEBUG velistMapper.findNovelistInIds  - ==> Parameters: 2(Integer), 3(Integer), 4(Integer)
+2020-03-02 00:24:45,182 797    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@609bcfb6]
+2020-03-02 00:24:45,182 797    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1620823990 to pool.
+2020-03-02 00:25:30,277 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-03-02 00:25:30,308 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:25:30,308 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:25:30,308 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:25:30,308 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-03-02 00:25:30,324 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-03-02 00:25:30,324 47     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-03-02 00:25:30,324 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-03-02 00:25:30,324 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-03-02 00:25:30,324 47     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-03-02 00:25:30,324 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,324 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImplTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImplTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 z
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/test-classes/cn/dbdj1201/mistake/mapper/INovelistMapperTest.class
+2020-03-02 00:25:30,417 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: impl
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapper.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: INovelistMapperImpl.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/impl/INovelistMapperImpl.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 �
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/F:/maven_project/mistake/target/classes/cn/dbdj1201/mistake/mapper/INovelistMapper.class
+2020-03-02 00:25:30,433 156    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 6 4 5 findAll ()Ljava/util/List; 	Signature 9()Ljava/util/List<Lcn/dbdj1201/mistake/domain/Novelist;>; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value select * from novelist findById ((I)Lcn/dbdj1201/mistake/domain/Novelist; (select * from novelist where nid = #{id} 
+2020-03-02 00:25:30,433 156    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImplTest matches criteria [is assignable to Object]
+2020-03-02 00:25:30,449 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapperTest matches criteria [is assignable to Object]
+2020-03-02 00:25:30,449 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.impl.INovelistMapperImpl matches criteria [is assignable to Object]
+2020-03-02 00:25:30,449 172    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class cn.dbdj1201.mistake.mapper.INovelistMapper matches criteria [is assignable to Object]
+2020-03-02 00:25:30,636 359    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-03-02 00:25:30,996 719    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1620823990.
+2020-03-02 00:25:30,996 719    [           main] DEBUG velistMapper.findNovelistInIds  - ==>  Preparing: select * from novelist WHERE nid in ( ? , ? , ? ) 
+2020-03-02 00:25:31,058 781    [           main] DEBUG velistMapper.findNovelistInIds  - ==> Parameters: 2(Integer), 3(Integer), 4(Integer)
+2020-03-02 00:25:31,136 859    [           main] DEBUG velistMapper.findNovelistInIds  - <==      Total: 3
+2020-03-02 00:25:31,136 859    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@609bcfb6]
+2020-03-02 00:25:31,136 859    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1620823990 to pool.

@@ -35,7 +35,8 @@ public class INovelistMapperImplTest {
 
     @Test
     public void findById() {
-        mapper.findAll().forEach(System.out::println);
+        Novelist novelist = mapper.findById(5);
+        System.out.println(novelist);
     }
 
     @Test

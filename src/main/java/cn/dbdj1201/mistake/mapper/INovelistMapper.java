@@ -1,6 +1,7 @@
 package cn.dbdj1201.mistake.mapper;
 
 import cn.dbdj1201.mistake.domain.Novelist;
+import cn.dbdj1201.mistake.domain.QueryVo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -60,9 +61,43 @@ public interface INovelistMapper {
 
     /**
      * 提供总记录数
+     *
      * @return
      */
     @Select("select count(*) from novelist")
     int findTotal();
+
+    /**
+     * 动态条件查询
+     *
+     * @param novelist
+     * @return
+     */
+    @Select({"<script>",
+            "select * from novelist ",
+            "where 1 = 1 and ",
+            "<if test='nname != null'>",
+            "nname = #{nname}",
+            "</if>",
+            "</script>"})
+    List<Novelist> findNovelistByCondition(Novelist novelist);
+
+
+    /**
+     * @param vo
+     * @return
+     */
+    @Select({"<script>",
+            "select * from novelist",
+            "<where>",
+            "<if test='ids != null and ids.size() > 0'>",
+            "<foreach collection='ids' open='and nid in (' close=')' item='nid' separator=','>",
+            "#{nid}",
+            "</foreach>",
+            "</if>",
+            "</where>",
+            "</script>"
+    })
+    List<Novelist> findNovelistInIds(QueryVo vo);
 
 }
