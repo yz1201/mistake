@@ -1,0 +1,2 @@
+# mistake
+mybatis -s
