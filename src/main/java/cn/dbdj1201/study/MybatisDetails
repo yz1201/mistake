@@ -41,3 +41,9 @@
                二：在SqlSessionImpl对象中提供selectList（）方法，不过mybatis其实是有多种方法的，eg：selectOne，insert。。。这些方法也得分步
                       ①：创建conn对象 ②：拿到sql语句，进行crud。
             5，封装结果集，不管是实现类中实现还是用代理对象，都要对结果集进行封装，这里先记住需要提供javabean的字节码类型。
+    mybatis使用ognl表达式解析对象字段的值，#{}或者${}中的值为pojo属性名称
+    OGNL表达式： Object   Graphic   Navigation Language
+                  对象     图          导航      语言
+                  通过对象的取值来获取数据，在写法上给get省略了。eg：类中user.getName()   ognl--> user.name mybatis中直接写username是因为在parameterType中提供了属性所属的类。
+    当然实际的查询条件仍需我们封装到相应QueryVo，在sql中用ognl表达式抽取出要查询的值。
+            QueryVo 也是javabean结构，封装的是domain中的实体类，哦，到时候会有多个实体类，多条件查询，确实需要外层封装。

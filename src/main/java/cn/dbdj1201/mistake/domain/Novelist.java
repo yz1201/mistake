@@ -1,10 +1,12 @@
 package cn.dbdj1201.mistake.domain;
 
+import java.io.Serializable;
+
 /**
  * @author tyz1201
  * @datetime 2020-03-01 15:35
  **/
-public class Novelist {
+public class Novelist implements Serializable {
     private Integer nid;
     private String nname;
     private String lifetime;
