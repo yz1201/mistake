@@ -5,10 +5,11 @@
 <mapper namespace="cn.dbdj1201.mistake.mapper.ICharacterMapper">
 
     <resultMap id="characterMap" type="character">
-        <id property="id" column="id"/>
+        <id property="id" column="cid"/>
         <result property="name" column="name"/>
         <result property="info" column="info"/>
-        <collection property="novel" ofType="novel">
+
+        <collection property="novels" ofType="novel">
             <id property="id" column="id"/>
             <result property="nid" column="nid"/>
             <result property="novelName" column="novelName"/>
@@ -23,9 +24,9 @@
         <!--        </association>-->
     </resultMap>
 
-    <!-- 查询所有 -->
+    <!--查询所有-->
     <select id="findAll" resultMap="characterMap">
-           select  * from tab_character
+SELECT  t.name, t.`info`,n.novelName FROM tab_character t LEFT JOIN novel_character n1 ON t.cid = n1.cid  LEFT JOIN novel n ON n1.nid = n.`id`;
     </select>
 
     <!--    <select id="findAllNovelNovelist" resultType="novelNovelist">-->

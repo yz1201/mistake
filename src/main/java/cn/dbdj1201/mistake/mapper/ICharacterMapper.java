@@ -1,5 +1,7 @@
 package cn.dbdj1201.mistake.mapper;
 
+import cn.dbdj1201.mistake.domain.Character;
+
 import java.util.List;
 
 /**

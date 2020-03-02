@@ -32,7 +32,7 @@ public class INovelMapperTest {
 
     @Test
     public void findAll() {
-        novelMapper.findAll().forEach(System.out::println);
+        novelMapper.findAll().forEach(novel -> novel.getCharacters().forEach(System.out::println));
     }
 
     @Test

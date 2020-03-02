@@ -20,7 +20,7 @@
         </plugins>
     </build>
 
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>

@@ -52,7 +52,7 @@ public class Character implements Serializable {
     @Override
     public String toString() {
         return "Character{" +
-                "id=" + id +
+                "cid=" + id +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
                 '}';

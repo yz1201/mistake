@@ -9,22 +9,28 @@
         <result property="novelName" column="novelName"/>
         <result property="nid" column="nid"/>
 
-        <association property="novelist" column="nid" javaType="novelist">
-            <id property="nid" column="nid"/>
-            <result property="nname" column="nname"/>
-            <result property="lifetime" column="lifetime"/>
-            <result property="novel" column="novel"/>
-            <result property="address" column="address"/>
-        </association>
+<!--        <association property="novelist" column="nid" javaType="novelist">-->
+<!--            <id property="nid" column="nid"/>-->
+<!--            <result property="nname" column="nname"/>-->
+<!--            <result property="lifetime" column="lifetime"/>-->
+<!--            <result property="novel" column="novel"/>-->
+<!--            <result property="address" column="address"/>-->
+<!--        </association>-->
+
+        <collection property="characters" ofType="character">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="info" column="info"/>
+        </collection>
     </resultMap>
 
     <!-- 查询所有 -->
     <select id="findAll" resultMap="novelNovelistMap">
-            select n2.*, n1.id, n1.nid, n1.novelName from novel n1 , novelist n2 where n1.nid = n2.nid
+            SELECT n1.*, t1.* FROM novel n1 LEFT JOIN novel_character n2 ON n1.`id` = n2.`nid` LEFT JOIN tab_character t1 ON t1.`cid` = n2.`cid`;
         </select>
 
-    <select id="findAllNovelNovelist" resultType="novelNovelist">
-            select n1.*, n2.nname, n2.address from novel n1 , novelist n2 where n1.nid = n2.nid
-        </select>
+<!--    <select id="findAllNovelNovelist" resultType="novelNovelist">-->
+<!--            select n1.*, n2.nname, n2.address from novel n1 , novelist n2 where n1.nid = n2.nid-->
+<!--        </select>-->
 
 </mapper>
