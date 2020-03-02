@@ -103,6 +103,6 @@ public interface INovelistMapper {
 
     List<Novelist> findAll();
 
-    Novelist findById();
+    Novelist findById(int id);
 
 }

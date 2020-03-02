@@ -76,7 +76,6 @@ public class Novelist implements Serializable {
                 ", lifetime='" + lifetime + '\'' +
                 ", novel='" + novel + '\'' +
                 ", address='" + address + '\'' +
-                ", novels=" + novels +
                 '}';
     }
 }

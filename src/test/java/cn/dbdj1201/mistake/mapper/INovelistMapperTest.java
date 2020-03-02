@@ -42,11 +42,17 @@ public class INovelistMapperTest {
 
     @Test
     public void findAll() {
+        novelistMapper.findAll().forEach(novelist ->
+                novelist.getNovels().forEach(System.out::println)
+        );
+
+
         novelistMapper.findAll().forEach(System.out::println);
     }
 
     @Test
     public void findById() {
+        System.out.println(novelistMapper.findById(5));
     }
 
 //    @Test

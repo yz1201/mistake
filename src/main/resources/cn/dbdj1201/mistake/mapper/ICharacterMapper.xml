@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dbdj1201.mistake.mapper.ICharacterMapper">
+
+    <resultMap id="characterMap" type="character">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="info" column="info"/>
+        <collection property="novel" ofType="novel">
+            <id property="id" column="id"/>
+            <result property="nid" column="nid"/>
+            <result property="novelName" column="novelName"/>
+        </collection>
+
+        <!--        <association property="novelist" column="nid" javaType="novelist">-->
+        <!--            <id property="nid" column="nid"/>-->
+        <!--            <result property="nname" column="nname"/>-->
+        <!--            <result property="lifetime" column="lifetime"/>-->
+        <!--            <result property="novel" column="novel"/>-->
+        <!--            <result property="address" column="address"/>-->
+        <!--        </association>-->
+    </resultMap>
+
+    <!-- 查询所有 -->
+    <select id="findAll" resultMap="characterMap">
+           select  * from tab_character
+    </select>
+
+    <!--    <select id="findAllNovelNovelist" resultType="novelNovelist">-->
+    <!--            select n1.*, n2.nname, n2.address from novel n1 , novelist n2 where n1.nid = n2.nid-->
+    <!--        </select>-->
+
+</mapper>

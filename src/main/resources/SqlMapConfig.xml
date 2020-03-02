@@ -6,6 +6,10 @@
 
     <properties resource="jdbcConfig.properties">
     </properties>
+
+    <typeAliases>
+        <package name="cn.dbdj1201.mistake.domain"/>
+    </typeAliases>
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"/>
@@ -20,6 +24,8 @@
 
     <mappers>
         <package name="cn.dbdj1201.mistake.mapper"/>
+        <!--        <mapper resource="cn/dbdj1201/mistake/mapper/INovelistMapper.xml"/>-->
+        <!--        <mapper resource="cn/dbdj1201/mistake/mapper/INovelMapper.xml"/>-->
     </mappers>
 
 </configuration>

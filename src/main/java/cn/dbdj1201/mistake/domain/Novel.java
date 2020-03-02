@@ -1,6 +1,7 @@
 package cn.dbdj1201.mistake.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author tyz1201
@@ -11,9 +12,20 @@ public class Novel implements Serializable {
     private Integer id;
     private String novelName;
     private Integer nid;
-    private Novelist novelist;
+
+    private Novelist novelist; //mybatis中，一对一实现，被谁写的。
+
+    private List<Character> characters; //出现的主要人物，多对多实现
 
     public Novel() {
+    }
+
+    public List<Character> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(List<Character> characters) {
+        this.characters = characters;
     }
 
     public Integer getId() {
@@ -54,7 +66,6 @@ public class Novel implements Serializable {
                 "id=" + id +
                 ", novelName='" + novelName + '\'' +
                 ", nid=" + nid +
-                ", novelist=" + novelist +
                 '}';
     }
 }

@@ -2,29 +2,28 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="cn.dbdj1201.mistake.mapper.INovelistMapper">
 
-    <!-- 定义User的resultMap-->
     <resultMap id="novelistNovelMap" type="novelist">
         <id property="nid" column="nid"/>
         <result property="nname" column="nname"/>
-        <result property="address" column="address"/>
         <result property="lifetime" column="lifetime"/>
         <result property="novel" column="novel"/>
-        <!-- 配置user对象中accounts集合的映射 -->
-        <collection property="novelists" ofType="novel">
+        <result property="address" column="address"/>
+
+        <collection property="novels" ofType="novel">
             <id column="id" property="id"/>
-            <result column="uid" property="uid"/>
+            <result column="nid" property="nid"/>
             <result column="novelName" property="novelName"/>
         </collection>
     </resultMap>
 
     <!-- 查询所有 -->
     <select id="findAll" resultMap="novelistNovelMap">
-        select * from novelist n1 left join novel n2 on n1.nid = n2.uid
+        select * from novelist n1 left join novel n2 on n1.nid = n2.nid
     </select>
 
-    <!-- 根据id查询用户 -->
     <select id="findById" parameterType="INT" resultType="novelist">
         select * from novelist where nid = #{nid}
     </select>
