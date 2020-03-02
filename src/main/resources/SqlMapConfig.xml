@@ -7,6 +7,11 @@
     <properties resource="jdbcConfig.properties">
     </properties>
 
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+
     <typeAliases>
         <package name="cn.dbdj1201.mistake.domain"/>
     </typeAliases>
@@ -26,6 +31,7 @@
         <package name="cn.dbdj1201.mistake.mapper"/>
         <!--        <mapper resource="cn/dbdj1201/mistake/mapper/INovelistMapper.xml"/>-->
         <!--        <mapper resource="cn/dbdj1201/mistake/mapper/INovelMapper.xml"/>-->
+        <!--        <mapper class=""></mapper>-->
     </mappers>
 
 </configuration>

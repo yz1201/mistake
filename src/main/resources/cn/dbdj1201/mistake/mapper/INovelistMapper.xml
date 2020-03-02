@@ -5,27 +5,28 @@
 
 <mapper namespace="cn.dbdj1201.mistake.mapper.INovelistMapper">
 
-    <resultMap id="novelistNovelMap" type="novelist">
-        <id property="nid" column="nid"/>
-        <result property="nname" column="nname"/>
-        <result property="lifetime" column="lifetime"/>
-        <result property="novel" column="novel"/>
-        <result property="address" column="address"/>
+<!--    <cache/>-->
+<!--    <resultMap id="novelistNovelMap" type="novelist">-->
+<!--        <id property="nid" column="nid"/>-->
+<!--        <result property="nname" column="nname"/>-->
+<!--        <result property="lifetime" column="lifetime"/>-->
+<!--        <result property="novel" column="novel"/>-->
+<!--        <result property="address" column="address"/>-->
 
-        <collection property="novels" ofType="novel">
-            <id column="id" property="id"/>
-            <result column="nid" property="nid"/>
-            <result column="novelName" property="novelName"/>
-        </collection>
-    </resultMap>
+<!--        <collection property="novels" ofType="novel">-->
+<!--            <id column="id" property="id"/>-->
+<!--            <result column="nid" property="nid"/>-->
+<!--            <result column="novelName" property="novelName"/>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
 
-    <!-- 查询所有 -->
-    <select id="findAll" resultMap="novelistNovelMap">
-        select * from novelist n1 left join novel n2 on n1.nid = n2.nid
-    </select>
+<!--    &lt;!&ndash; 查询所有 &ndash;&gt;-->
+<!--    <select id="findAll" resultMap="novelistNovelMap" useCache="true">-->
+<!--        select * from novelist n1 left join novel n2 on n1.nid = n2.nid-->
+<!--    </select>-->
 
-    <select id="findById" parameterType="INT" resultType="novelist">
-        select * from novelist where nid = #{nid}
-    </select>
+<!--    <select id="findById" parameterType="INT" resultType="novelist">-->
+<!--        select * from novelist where nid = #{nid}-->
+<!--    </select>-->
 
 </mapper>
