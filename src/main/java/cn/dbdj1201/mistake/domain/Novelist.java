@@ -1,19 +1,31 @@
 package cn.dbdj1201.mistake.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author tyz1201
  * @datetime 2020-03-01 15:35
+ * 一对多实体类，一的一方，被指向，实体类包含List<Novel>
  **/
 public class Novelist implements Serializable {
     private Integer nid;
     private String nname;
     private String lifetime;
-    private String novel;
+    private String novel;       //symbol work
     private String address;
 
+    private List<Novel> novels;
+
     public Novelist() {
+    }
+
+    public List<Novel> getNovels() {
+        return novels;
+    }
+
+    public void setNovels(List<Novel> novels) {
+        this.novels = novels;
     }
 
     public Integer getNid() {
@@ -64,6 +76,7 @@ public class Novelist implements Serializable {
                 ", lifetime='" + lifetime + '\'' +
                 ", novel='" + novel + '\'' +
                 ", address='" + address + '\'' +
+                ", novels=" + novels +
                 '}';
     }
 }
