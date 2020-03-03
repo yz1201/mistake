@@ -23,5 +23,178 @@
         案例
         工厂模式的解耦
 3，IOC概念，spring中的IOC
+  解耦，解决程序中的依赖关系，降低。eg：工厂模式解耦，少使用new。将properties中的k，v存入java容器中，做到单例？
         spring中基于XML的IOC环境搭建
+            获取spring的ioc核心容器ApplicationContext
+            通过xml配置的id获取对象
+            三个常用的ac实现类：
+                 ClassPathXmlApplicationContext 类路径下配置bean.xml，根据配置文件创建容器。
+                 FileSystemXmlApplicationContext 可以加载任意位置的配置文件，然后创建容器。
+                 AnnotationApplicationContext   读取注解创建容器。
+        spring两个核心接口
+        ApplicationContext 单例对象适用
+            它在创建核心容器时，创建对象采取的策略是立即加载的方式，即，读取完配置文件之后就会创建相应对象
+        BeanFactory         多例对象适用
+            构建核心容器时，采取lazy策略，对对象创建采取延迟加载方式，获取时创建。
+
+        spring 对bean 的管理细节
+               创建bean的三种方式，为啥有这么多？因为想适应多种场景。
+                    1，当beans.xml中配置bean时，只有id跟class属性标签，就会以默认构造器去创建对象，实际组件无空参构造会报错。
+                        <bean id=" " class=" " />
+                    2，使用普通工厂中的方法创建对象(使用某个类中的方法创建对象并存入容器)
+                        <bean id="" factory-bean="" factory-method=""/>
+                    3，使用静态工厂中的静态方法创建对象，使用某个类中的静态方法创建对象并存入容器
+                        <bean id=" " class=" " factory-method=" "/>
+               bean对象的作用范围
+                    bean标签的scope属性
+                    用于指定bean的作用范围，
+                    取值：
+                        singleton   单例 default
+                        prototype   多例
+                        request     作用于web应用的请求范围
+                        session     作用于web应用的会话范围
+                        global-session      作用于集群应用的会话范围，全局会话范围，当不是集群环境时，当成session范围用。
+               bean对象生命周期
+                    单例对象
+                        单例对象的一生都跟着容器，容器创建时它创建，容器销毁，它也被销毁 Eager
+                    多例对象
+                        init：lazy init延迟加载
+                        活着：对象使用过程中
+                        销毁：jvm GC自动回收。
 4，依赖注入DI
+        Dependency Injection
+        IOC降低程序间的耦合，bean对象交由spring容器管理，其间存在的依赖关系，也由spring维护
+        在当前类中要用到其他类时，由spring提供，在配置文件中配置属性。
+        这种依赖关系的维护就是依赖注入
+        依赖注入：
+            能注入的数据有三类：
+                    1，基本类型以及String
+                    2，其他bean类型(在配置文件或者注解配置的bean)
+                    3，复杂类型/集合类型
+                        用于给List集合注入的标签：list  array set
+                        用于map的 k-v结构，map，pros
+                        结构相同，标签可以互换。
+                          <!--复杂类型，集合类型注入-->
+                            <bean id="charService1" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">
+                                <property name="testDI" value="test"/>
+                                <property name="mapper" ref="charMapper"/>
+                                <property name="testL">
+                                    <array>
+                                        <value>1</value>
+                                        <value>2</value>
+                                        <value>3</value>
+                                        <value>4</value>
+                                    </array>
+                                </property>
+                                <property name="properties">
+                                    <props>
+                                      <prop key="t1">t1_value</prop>
+                                      <prop key="t2">t1_value</prop>
+                                      <prop key="t3">t1_value</prop>
+                                      <prop key="t4">t1_value</prop>
+                                    </props>
+                                </property>
+                            </bean>
+            注入方式三种：
+                    第一种，使用构造函数提供
+                       <!--构造函数注入：
+                        使用的标签为constructor-arg
+                           标签用在bean内部，文本位置？
+                                  标签属性：
+                                type：  用于指定要注入的参数类型，得跟构造器参数匹配，多个相同的就费劲了，value赋值
+                                 index： 索引从0开始，跟指定构造器的参数列表匹配去指定di的数据
+                                 name：  跟构造器参数列表的参数名匹配，比较常用。
+                                 value:  用于提供基本类型，String类型数据
+                                 ref：    用于提供指定其他的bean类型数据，特指，在spring容器中配置过的bean对象。
+                                 优势：获取bean对象时，注入数据是必须的操作，否则对象无法创建成功。
+                                 弊端：改变了bean对象实例化方式，创建对象时必须提供所有参数。所以，一般用不到这个。
+                          -->
+                          <bean id="charService" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">
+                              <constructor-arg name="testDI" value="test"/>
+                              <constructor-arg name="mapper" ref="charMapper"/>
+                          </bean>
+                          <bean id="charMapper" class="cn.dbdj1201.mistake.mapper.impl.ICharacterMapperImpl"/>
+                    第二种，使用set方法
+                         <!-- set 方法注入：
+                                   涉及的标签：property
+                                        同样在bean标签内部使用。
+                                   标签的属性：
+                                        name：   用于指定注入时所调用的set方法参数
+                                        value：  指定基本类型，String类型的数据
+                                        ref：    其他bean
+                                   优势：创建对象时没有明确的限制，可以使用默认构造器    常用
+                                   劣势：如果有某个成员必须有值，则获取对象时有可能set方法没有执行。？？
+                            -->
+                            <bean id="charService" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">
+                                <property name="testDI" value="test"/>
+                                <property name="mapper" ref="charMapper"/>
+                            </bean>
+                    第三种，注解
+
+1，spring中ioc的常用注解
+    第一类：用于创建对象的
+        对应创建对象的xml中 bean配置对象的
+        @Component
+            即把当前配置类放入spring容器中
+            属性： value：用于指定bean的id，默认值是当前类名的首字母小写的字符串
+        @Controller 用于控制器 表现层
+        @Service    业务层
+        @Repository DAO层，操作数据库 持久层
+        这三个注解的作用跟属性跟component一样，是spring提供的明确的三层使用注解，使mvc bean对象清晰化。
+    第二类：用于注入数据的 与xml 中property标签对应
+        @Autowired：自动安装类型注入，只要容器中有唯一的一个bean对象类型和要注入的变量类型匹配，就可以注入。
+              可以用于变量上，也可以用于方法上，自己看源码。 这种注解方式就可以不用在bean中实现set方法了。
+        如果一个没有，出问题正常，如果多个实现类，都给注解配置了，可能有运行时异常，为啥有可能不报错呢，因为先是去匹配类，然后去
+        匹配了传入参数与指定bean对象名，一致的就拿到了。
+        @Qualifier 在按照类中注入的基础上再按照名称注入，它在给类成员注入时不能单独使用，在给方法参数注入时可以,写在方法参数中，注解非自己可修改的类时。
+        属性value 用于指定注入bean对象的id
+        @Resource 之间注入指定id的bean对象，注意它属性叫name
+
+        @Value，给基本类型跟String注入时赋值的，属性是value，可以使用SpEL(spring中的表达式语言)表达式 ${}去指定位置取值
+       attention: 集合类型的注入只能通过xml来实现啊。
+
+    第三类：用于改变作用范围的 对应于bean标签的scope属性标签
+        @Scope 用于指定bean的作用范围
+            singleton  default eager
+            prototype  多例    lazy  jvm GC
+            request
+            session
+            global-session  集群，负载均衡
+    第四类：跟生命周期相关的 对应于xml中init-method destroy-method
+        @PreDestroy 指定销毁方法 destroy-method
+        @PostConstruct 指定初始化方法 init-method
+2，案例使用xml方式和注解方式实现单表的CRUD操作
+    持久层选DBUtils
+3，改造基于注解的ioc案例，使用纯注解方式实现
+    spring一些新注解的使用
+    如何去掉bean.xml呢？
+    新注解
+        @Configuration
+            作用：指定当前类，是一个配置类
+            细节：当配置类作为AnnotationConfigApplicationContext的参数时，可以不写在该类上。
+        @ComponentScan() 属性value 跟basePackages一样
+            注解方式，指定spring容器创建时要扫描的包
+        @Bean
+            把当前方法的返回值作为bean对象存入spring的ioc容器中
+             属性name 别名value 用于指定bean的id 默认值是当前方法名称。（属性？）
+             当使用注解配置方法时，若方法有参数，spring会从容器中查找有无可用的bean对象，查找方法跟Autowired方式一样。
+        @Import
+            用于导入其他的配置类，主配置类使用，导入其他配置类。主配置类传给AnnotationConfigApplicationContext当参数
+            属性value，是其他类的字节码
+        @PropertySource
+            eg：配置jdbc配置文件 k-v 注意key为usename时，springEL ${username} 取值是系统用户名？
+
+4，spring跟junit整合
+    应用程序入口： main
+    junit单元测试中，没有main方法也能执行，因为它集成了一个main方法，该方法会判断当前测试类中哪些方法上有@Test注解，有注解的就可以执行（method.invoke）。
+    junit不管我们是否使用了spring框架，在执行测试方法时，junit不知道是否用了spring框架，所以也不会自己去读取配置文件，创建核心容器。
+    当测试方法执行时，没有ioc容器，就算有autowired注解，也没办法注入bean对象。
+
+    整合流程：
+        1,导入jar包 spring-test
+        2,使用junit提供的一个注解把原有的main方法替换成spring提供的 @RunWith(SpringJUnit4ClassRunner.class)
+        3,告知spring，spring ioc是基于xml的还是注解配置的，并指定位置
+            @ContextConfiguration
+                属性：locations：指定xml文件位置，加上classpath：关键字，表示在类路径下
+                      classes：指定注解类所在位置
+        attention：当我们使用spring5.x版本时，junit版本必须在4.12以上。

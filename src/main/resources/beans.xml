@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 把对象的创建交给spring管理-->
+
+    <!--构造函数注入：
+           使用的标签为constructor-arg
+           标签用在bean内部，文本位置？
+           标签属性：
+                type：  用于指定要注入的参数类型，得跟构造器参数匹配，多个相同的就费劲了，value赋值
+                index： 索引从0开始，跟指定构造器的参数列表匹配去指定di的数据
+                name：  跟构造器参数列表的参数名匹配，比较常用。
+                value:  用于提供基本类型，String类型数据
+                ref：    用于提供指定其他的bean类型数据，特指，在spring容器中配置过的bean对象。
+           优势：获取bean对象时，注入数据是必须的操作，否则对象无法创建成功。
+    -->
+
+    <!--    <bean id="charService" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">-->
+    <!--        <constructor-arg name="testDI" value="test"/>-->
+    <!--        <constructor-arg name="mapper" ref="charMapper"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="charMapper" class="cn.dbdj1201.mistake.mapper.impl.ICharacterMapperImpl"/>-->
+
+    <!-- set 方法注入：
+           涉及的标签：property
+                同样在bean标签内部使用。
+           标签的属性：
+                name：   用于指定注入时所调用的set方法参数
+                value：  指定基本类型，String类型的数据
+                ref：    其他bean
+           优势：创建对象时没有明确的限制，可以使用默认构造器    常用
+           劣势：如果有某个成员必须有值，则获取对象时有可能set方法没有执行。？？
+    -->
+    <!--    <bean id="charService" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">-->
+    <!--        <property name="testDI" value="test"/>-->
+    <!--        <property name="mapper" ref="charMapper"/>-->
+    <!--    </bean>-->
+
+    <!--复杂类型，集合类型注入-->
+    <!--    <bean id="charService1" class="cn.dbdj1201.mistake.service.impl.ICharacterServiceImpl">-->
+    <!--        <property name="testDI" value="test"/>-->
+    <!--        <property name="mapper" ref="charMapper"/>-->
+    <!--        <property name="testL">-->
+    <!--            <array>-->
+    <!--                <value>1</value>-->
+    <!--                <value>2</value>-->
+    <!--                <value>3</value>-->
+    <!--                <value>4</value>-->
+    <!--            </array>-->
+    <!--        </property>-->
+    <!--        <property name="properties">-->
+    <!--            <props>-->
+    <!--              <prop key="t1">t1_value</prop>-->
+    <!--              <prop key="t2">t1_value</prop>-->
+    <!--              <prop key="t3">t1_value</prop>-->
+    <!--              <prop key="t4">t1_value</prop>-->
+    <!--            </props>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+
+    <context:component-scan base-package="cn.dbdj1201.mistake"/>
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql:///db_mybatis"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+</beans>

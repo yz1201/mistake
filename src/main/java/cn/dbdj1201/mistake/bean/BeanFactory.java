@@ -1,10 +1,8 @@
 package cn.dbdj1201.mistake.bean;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * @author tyz1201
@@ -18,23 +16,24 @@ import java.util.Properties;
 public class BeanFactory {
 
     private static Properties pros;
+    private static Map<String, Object> beans = new HashMap<>();
 
     static {
         pros = new Properties();
         try {
             pros.load(Objects.requireNonNull(BeanFactory.class.getClassLoader().getResourceAsStream("bean.properties")));
-        } catch (IOException e) {
+            Enumeration<Object> keys = pros.keys();
+            while (keys.hasMoreElements()) {
+                String key = (String) keys.nextElement();
+                String beanPath = pros.getProperty(key);
+                beans.put(key, Class.forName(beanPath).getConstructor().newInstance());
+            }
+        } catch (IOException | ClassNotFoundException | InstantiationException | InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
             e.printStackTrace();
         }
     }
 
     public static Object newInstance(String beanName) {
-        Object bean = null;
-        try {
-            bean = Class.forName(pros.getProperty(beanName)).getConstructor().newInstance();
-        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
-            e.printStackTrace();
-        }
-        return bean;
+        return beans.get(beanName);
     }
 }

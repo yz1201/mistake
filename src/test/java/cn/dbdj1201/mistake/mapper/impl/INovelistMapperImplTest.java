@@ -2,11 +2,17 @@ package cn.dbdj1201.mistake.mapper.impl;
 
 import cn.dbdj1201.mistake.domain.Novelist;
 import cn.dbdj1201.mistake.mapper.INovelistMapper;
+import config.SpringConfiguration;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.io.InputStream;
 
 import static org.junit.Assert.*;
@@ -15,7 +21,26 @@ import static org.junit.Assert.*;
  * @author tyz1201
  * @datetime 2020-03-01 17:39
  **/
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfiguration.class)
 public class INovelistMapperImplTest {
+    @Autowired
+    private INovelistMapper mapper;
+
+    @Test
+    public void findAll() {
+        Novelist novelist = new Novelist();
+        novelist.setNname("t3");
+        novelist.setLifetime("t3");
+        novelist.setAddress("t3");
+        novelist.setNovel("t3");
+        mapper.save(novelist);
+        mapper.findAll().forEach(System.out::println);
+    }
+
+    @Test
+    public void save() {
+    }
 //    private InputStream in;
 //    private INovelistMapper mapper;
 //
