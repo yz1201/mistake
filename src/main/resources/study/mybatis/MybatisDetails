@@ -1,0 +1,169 @@
+    mybatis是一个优秀的持久层框架，内部封装了jdbc，我们只需要关注sql本身，而不需要花费精力去处理加载驱动，创建链接，创建statement等繁杂的过程。
+    mybatis通过xml或注解的方式将要执行的各种statement配置起来，通过java对象跟statement中sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql语句，并将结果映射为java对象并返回。
+    采用ORM（Object Relational Mapping 对象关系映射）思想解决了实体跟数据库映射问题，对jdbc进行了封装，屏蔽了jdbc api底层访问细节。
+       User(domain)  <--                    -->    User(tab_user)
+        uId    <--实体类属性名应跟数据库表字段名保持一致-->   uid
+
+    从自定义mybatis开始学习。
+
+    mybatis入门
+            环境搭建：
+                    1，创建maven工程导入gav坐标
+                    2，创建实体类跟dao接口
+                    3，创建mybatis的主配置文件 SqlMapConfig.xml
+                    4，创建映射配置文件        INovelistDao.xml
+            注意：
+                    1，创建INovelistDao.xml,跟INovelistDao.java时是之前数据持久化的起名习惯，mybatis也可以叫INovelistMapper
+                    2，包跟目录不同，只能新建一个目录，eg：新建目录com.tyz，只有一层。
+                    3，mybatis的映射配置文件位置必须跟dao接口的包结构相同
+                    4，映射配置文件的mapper标签namespace属性的取值必须是dao接口的全限定类目
+                    5，映射配置文件的操作配置，id属性的取值必须是dao接口的方法名。
+
+    mybatis入门案例
+                    1，读取配置文件
+                    2，创建SqlSessionFactory
+                    3，创建SqlSession
+                    4，创建Dao接口的代理对象
+                    5，执行dao中方法
+                    6，释放资源
+                 注意：resource中的目录要一级一级写，而且定位的分隔符得用/
+
+             注解入门，给映射文件xml删了，dao接口中@Select("相应sql语句")，SqlMapConfig.xml中 mapper  设置class属性为相应的dao接口，class属性的值写 全类名。
+    自定义mybatis分析： mybatis在使用代理dao的方式实现增删改查时做了？ 1，代理对象创建.2，代理对象执行方法。这个过程不就是反射?
+    工作流程（生命周期？）：
+            1，SqlSessionFactoryBuilder 接收SqlMapConfig.xml输入文件流，解析构建出SqlSessionFactory对象。
+            2，SqlSessionFactorty读取SqlMapConfig.xml中连接数据库跟mapper映射信息，用于生产真正操作数据库的SqlSession对象
+            3，SqlSession对象两大作用，生成接口代理对象   定义通用增删改查方法。
+            注：无论哪个分支，除了连接数据库信息，还需要得到sql语句。
+            4，一：在SqlSessionImpl对象的getMapper方法中分两步实现，
+                    新建Connection对象，此对象信息，由xml文件中的驱动跟url 用户信息可完成。
+                    通过jdk代理模式创建代理对象，作为getMapper方法的返回值，在代理对象时用到并执行具体的sql语句。
+               二：在SqlSessionImpl对象中提供selectList（）方法，不过mybatis其实是有多种方法的，eg：selectOne，insert。。。这些方法也得分步
+                      ①：创建conn对象 ②：拿到sql语句，进行crud。
+            5，封装结果集，不管是实现类中实现还是用代理对象，都要对结果集进行封装，这里先记住需要提供javabean的字节码类型。
+    mybatis使用ognl表达式解析对象字段的值，#{}或者${}中的值为pojo属性名称
+    OGNL表达式： Object   Graphic   Navigation Language
+                  对象     图          导航      语言
+                  通过对象的取值来获取数据，在写法上给get省略了。eg：类中user.getName()   ognl--> user.name mybatis中直接写username是因为在parameterType中提供了属性所属的类。
+    当然实际的查询条件仍需我们封装到相应QueryVo，在sql中用ognl表达式抽取出要查询的值。
+            QueryVo 也是javabean结构，封装的是domain中的实体类，哦，到时候会有多个实体类，多条件查询，确实需要外层封装。
+
+    SqlMapConfig.xml文件中的 properties节点以及mappers节点的resource 属性，跟url属性区别：
+            resource 用于指定配置文件的位置，是按照类路径的写法来写，并且必须存在类路线下(即main/resource目录下，maven工程,在main/java下，pom文件中需标志，让虚拟机去扫描才能找到)
+            URL： Uniform Resource Locator 统一资源定位符，可以唯一标识一个资源的位置，写法：http://localhost:8080/mybatis/demo1Servlet
+                                                                                         协议      主机  端口号   URI
+            URI：Uniform Resource Identifier 统一资源标识符，在一个应用中可以唯一定位一个资源
+
+            eg：jdbcConfig,xml 在当前目录系统的URL为，file:///F:/maven_project/mistake/src/main/resources/jdbcConfig.properties。将该文件拖入浏览器location即可得到
+
+    使用typeAlias配置别名，它只能配置domain中类的别名。 type属性指定的是全限定类名，一旦配置完成，别名不区分大小写。
+        eg：   <typeAliases>
+                   <typeAlias type="cn.dbdj1201.mistake.domain.Novelist" alias="novelist"/>
+               </typeAliases>
+    使用package，该包下的实体类都会自动配类名相同的别名。
+               <typeAliases>
+                   <package name="cn.dbdj1201.mistake.domain"/>
+               </typeAliases>
+    在mappers下配置package标签，是用于指定接口所在的包，当指定了之后就不需要再写mapper以及resource或者class了。
+
+n
+mybatis中的连接池以及事务控制
+        mybatis中连接池使用及分析
+        mybatis事务控制的分析
+mybatis基于XML配置的动态SQL语句使用
+        mappers配置文件中的几个标签：
+                if
+                where
+                foreach
+                sql
+mybatis的多表操作
+        一对多
+        一对一
+        多对多
+
+连接池：实际应用时会使用到连接池，可以减少获取连接的时间。连接池就是存储连接的容器，是一个集合对象，该集合必须保证线程安全，不能两个线程拿到同一个连接，
+该集合还必须实现队列FIFO特性。队头队尾，两个口子，栈，只有一个口，被按下去，要等前边的出去，FILO
+
+<dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+</dataSource>
+type即为连接池的实现方式，type有三种取值：
+        POOLED   采用传统的javax.sql.DataSource规范中的连接池，mybatis中有针对该规范的实现
+        UNPOOLED 采用传统的获取连接的方式，虽然同样实现了javax.sal.DataSource接口，但是并没有使用池的思想
+        JNDI     采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器拿到的DataSource是不一样的，如果部署web或者maven的war工程，是不能使用的。
+                 就现在使用的tomcat服务器而言，采用的连接池为dbcp连接池。
+
+mybatis中的事务
+         事务的定义
+         事务四大特性ACID
+         不考虑隔离性会产生的3个问题
+         解决办法，四种隔离级别。
+mybatis中通过SqlSession中commit方法进行提交 SqlSessionFactory的openSession(true)传入true，即可开启自动提交事务，默认是手动提交，不手动，事务
+很难得到控制。 SqlSession 中rollback方法进行回滚。
+
+mybatis中的多表查询
+        表关系：
+            一对多：用户订单
+            多对一：反向
+            多对多：学生<- ->老师
+            一对一: 事物<- ->唯一标识
+        特例：对于单个订单来说，他只会属于一个用户，mybatis中将这种对应关系，多对一，视为一对一。
+        mybatis多表查询：
+               实例1，一个小说家，多个小说人物，多本小说，或者系列小说。
+               打算--》建议小说表，一个novelist对应多个小说，一本小说对应一个作者。
+               mybatis实现这个过程，即，domain实体类的创建，配置文件，或者mapper注解的方式实现映射配置的解析。
+               数据库新建相应表，其中小说表结构为id novelName 外键
+               小目标--》查询一个用户时，希望同时看到他写过的所有小说信息。
+
+               例2：小说和人物
+                    一个小说可以有多个人物
+                    一个人物可以出现在多本小说中。
+                步骤：
+                    1、建立两张表：novel表，人物表tab_character
+                        让两张表具有多对多的关系。需要使用中间表，中间表中包含各自的主键，在中间表中是外键。
+                    2、建立实体类：
+                        让小说和人物的实体类能体现出来多对多的关系
+                        各自包含对方一个集合引用
+                    3、建立两个配置文件
+                        小说的配置文件
+                        人物的配置文件
+                    4、实现配置：
+                        当我们查询novel时，可以同时得到novel所包含的人物信息
+                        当我们查询人物时，可以同时得到人物的所属的小说信息
+        多表关联查询，两个left join
+  mybatis的延迟加载：
+            延迟加载定义，什么是立即加载
+            one2many场景，当作者著作等身，关注点在作家本身信息时，查询开销比较大时，是否还需要查询其作品？延迟加载在这些地方就需要使用了，即用到时再查询。
+                          而查询many一方时，作品所属作者信息可同时查询，开销不大。
+            故而延迟加载就是按需加载，有需要时，用到时才发起查询，懒加载，lazy-init，立即加载则是调用方法后马上发起查询。
+            一般常见下的查询方案：一对多，多对多，懒加载，延迟加载
+                                多对一，一对一， 立即加载。
+           <!-- 全局性设置懒加载。如果设为‘false'，则所有相关联的都会被初始化加载。 -->
+               <setting name="lazyLoadingEnabled" value="true"/>
+               <!-- 当设置为‘true'的时候，懒加载的对象可能被任何懒属性全部加载。否则，每个属性都按需加载。 -->
+               <setting name="aggressiveLazyLoading" value="false"/>
+
+
+  mybatis当中的缓存
+            缓存定义，使用缓存的意义，缓存使用场景，mybatis当中的一级缓存跟二级缓存
+     缓存就是内存中的临时数据，之前的redis就是利用缓存工作的nosql数据库。它可以减少应用跟数据库的交互，提高执行效率。参考redis
+     场景：经常查询，不需改变的，数据的正确与否对结果影响不大的（？）。所以，如果是要经常改变的数据，浮动类型的，商品库存，银行利率，股市，数据的准确性对最终结果影响也很大的，就不适合。
+     一级缓存：指的是mybatis中SqlSession对象的缓存，一次查询执行之后，查询结果会同时存入SqlSession，为我们提供一块内存区域，表面缓存？当前SqlSession没了，一级缓存就没了。
+     二级缓存使用：
+          1，开启二级缓存策略，让mybatis框架支持二级缓存，SqlMapConfig.xml中配置
+          2，让映射配置文件支持二级缓存，在相应的配置文件中设置（或者注解配置？这个还没看过）
+          3，让当前执行的操作支持二级缓存，即相应select sql标签中设置
+
+            <settings>
+                <setting name="cacheEnabled" value="true"/>
+            </settings>
+
+  mybatis注解开发？这部分已经入了不少，看看，不熟的地方给xml注释冲一冲。
+            多表查询部分，缓存设置部分，需冲一冲。
+            　@CacheNamespace(blocking = true)
+
+
+

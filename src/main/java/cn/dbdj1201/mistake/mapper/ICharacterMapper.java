@@ -23,11 +23,14 @@ public interface ICharacterMapper {
             @Result(id = true, property = "id", column = "cid"),
             @Result(property = "name", column = "name"),
             @Result(property = "info", column = "info"),
-            @Result(property = "novels", column = "id", many = @Many(select = "cn.dbdj1201.mistake.mapper.INovelMapper.findNovelBy",
+            @Result(property = "novels", column = "cid", many = @Many(select = "cn.dbdj1201.mistake.mapper.INovelMapper.findNovelBy",
                     fetchType = FetchType.EAGER))
     })
     List<Character> findAll();
 
     @Select("select t1.* from tab_character t1 where t1.cid in  (select cid from novel_character where nid = #{nid})")
     List<Character> findCharacterBy(int nid);
+
+    void test();
+
 }

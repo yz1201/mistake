@@ -1,0 +1,19 @@
+Cookie      会话 -->一次会话中包含多个请求响应
+      一次会话：浏览器第一次给服务端发送请求，会话就会建立，直到一方断开为止。
+      for-->在一次会话范围内，多个请求间，共享数据。
+      方式：1-客户端会话技术 Cookie 2-服务端会话技术 Session
+      Cookie 一门客户端会话技术，将数据保存在客户端?
+      使用api--1，创建Cookie对象，绑定数据。 new 2，发送Cookie对象。resp 3获取Cookie，拿到数据。req.getCookies();返回值，cookie数组
+      通过响应头中的set-cookie跟请求头中的Cookie实现
+      Cookie使用tips：1，一次可以add多个cookie。
+      2，cookie在客户端保存时间。默认情况下，当前客户端关闭cookie即销毁。
+      当然可以让cookie持久化，setMaxAge(int seconds); int + - 0. +则将Cookie数据写到硬盘，做持久化存储，在seconds时间内文件不被删除 负数是默认值
+      0，即删除cookie 信息。
+      3，cookie 存中文？ 现在可以了
+      4，cookie获取范围问题。一个tomcat容器多个项目间，默认不能共享cookie数据
+      setPath(String path) 可以设置cookie的范围。默认是虚拟目录，即/+项目名，我设置的"/" ,有点问题了就，共享了。
+      不同的tomcat容器间怎么共享cookie呢？ setDomain(String path)：设置一级域名相同，不同web容器间的cookie就可以共享了。
+      eg：setDomain(".baidu.com") new.baidu.* 跟 tieba.* 后边一样的一级域名，可以共享cookie
+      Cookie 特点： 1，数据存在客户端，安全性？ 2 浏览器对于单个cookie大小有限制（4kb），对同一个域名的总cookie数量也有限制（20个）。
+      for--->cookie一般用于存储少量的不太敏感的数据
+      --->在不登陆情况下，完成服务端对客户端的身份识别，拿到一些属性数据？

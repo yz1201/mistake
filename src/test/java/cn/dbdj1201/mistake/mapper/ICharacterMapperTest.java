@@ -33,7 +33,7 @@ public class ICharacterMapperTest {
     @Test
     public void findAll() {
         mapper.findAll().forEach(novel -> {
-//            System.out.println(novel);
+            System.out.print(novel);
             novel.getNovels().forEach(System.out::println);
         });
 

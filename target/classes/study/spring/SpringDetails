@@ -1,0 +1,27 @@
+1, spring概述，
+        spring是什么
+            Spring是分层的Java SE/EE 应用full-stack轻量级开源框架，以IOC跟AOP为内核，提供了展现层SpringMVC跟持久层SpringJDBC，以及业务层事务管理等众多的企业级应用技术，
+            还能整合开源界众多著名的第三方框架跟类库，逐渐成为使用最多的JavaEE企业级应用开源框架。
+        spring两大核心
+            IOC：Inverse Of Control 控制反转
+            AOP：Aspect Oriented Programming 面向切面编程
+        spring的发展历程，优势
+            优势，
+                方便解耦，简化开发。
+                AOP编程的支持。
+                声明式事务的支持
+                方便测试？
+                方便继承其他优秀框架
+                降低JavaEE API的使用难度， eg：JDBCTemplate，对某些功能又有封装。
+                源码写的很棒，可以瞅瞅。
+        spring体系结构
+            
+2，程序的耦合及解耦
+        耦合？，程序间的依赖关系？源头--》类之间的依赖，方法之间的依赖。
+        解耦就是要减少程序间依赖关系，这样方便修改。
+        怎么做到，？利用反射啊，反射在运行时期才去找东西。用反射新建对象，不用new关键字，Class.forName(),其次，还要通过配置文件读取的方式获取全类名，这样也可以改。
+        案例
+        工厂模式的解耦
+3，IOC概念，spring中的IOC
+        spring中基于XML的IOC环境搭建
+4，依赖注入DI

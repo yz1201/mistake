@@ -1,0 +1,23 @@
+Listener
+    事件监听机制（其中之一）
+        事件，发生的事情
+        事件源，哪个组件触发的
+        监听器，一个对象？
+        注册监听，将事件，事件源，监听器绑定在一块，事件源触发事件时，执行监听器代码。
+        #id.onClick()
+
+    ServletContextListener 监听ServletContext对象的创建和销毁。
+        void contextDestroyed(ServletContextEvent sce):    被销毁之前调用
+        void contextInitialized(ServletContextEvent sce):  创建后调用
+
+    使用步骤：
+          1  class  class_name implements ServletContextListener{}
+          2  方法实现
+          3  配置
+                web.xml
+                <listener>
+                    <listener-class>全类名</listener-class>
+                </listener>
+
+                * 指定初始化参数<context-param>
+                注解配置  @WebListener 老熟人了都。
