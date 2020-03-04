@@ -41,6 +41,19 @@ public class INovelistMapperImplTest {
     @Test
     public void save() {
     }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void findByName() {
+        System.out.println(mapper.findByName("t1"));
+    }
 //    private InputStream in;
 //    private INovelistMapper mapper;
 //

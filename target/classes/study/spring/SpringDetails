@@ -164,7 +164,7 @@
         @PreDestroy 指定销毁方法 destroy-method
         @PostConstruct 指定初始化方法 init-method
 2，案例使用xml方式和注解方式实现单表的CRUD操作
-    持久层选DBUtils
+    持久层选DBUtils+DruidDataSource
 3，改造基于注解的ioc案例，使用纯注解方式实现
     spring一些新注解的使用
     如何去掉bean.xml呢？

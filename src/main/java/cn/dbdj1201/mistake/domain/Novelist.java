@@ -14,6 +14,7 @@ public class Novelist implements Serializable {
     private String lifetime;
     private String novel;       //symbol work
     private String address;
+    private Integer money;
 
     private List<Novel> novels;
 
@@ -68,6 +69,14 @@ public class Novelist implements Serializable {
         this.address = address;
     }
 
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
+
     @Override
     public String toString() {
         return "Novelist{" +
@@ -76,6 +85,7 @@ public class Novelist implements Serializable {
                 ", lifetime='" + lifetime + '\'' +
                 ", novel='" + novel + '\'' +
                 ", address='" + address + '\'' +
+                ", money=" + money +
                 '}';
     }
 }

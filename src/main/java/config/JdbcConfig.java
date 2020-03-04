@@ -35,7 +35,7 @@ public class JdbcConfig {
     @Bean("dataSource")
     public DataSource createDataSource() {
         DruidDataSource ds = null;
-        System.out.println(username + password + url + driver);
+//        System.out.println(username + password + url + driver);
         try {
             ds = new DruidDataSource();
             ds.setDriverClassName(driver);

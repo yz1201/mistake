@@ -25,11 +25,26 @@ public interface INovelistMapper {
             @Result(property = "lifetime", column = "lifetime"),
             @Result(property = "novel", column = "novel"),
             @Result(property = "address", column = "address"),
-            @Result(column = "nid", property = "novels", many=@Many(select="cn.dbdj1201.mistake.mapper.INovelMapper.findNovelByNid",fetchType= FetchType.LAZY))
+            @Result(column = "nid", property = "novels", many = @Many(select = "cn.dbdj1201.mistake.mapper.INovelMapper.findNovelByNid", fetchType = FetchType.LAZY))
     })
     List<Novelist> findAll();
 
     void save(Novelist novelist);
+
+    /**
+     * 根据小说家名字查询
+     *
+     * @param name
+     * @return
+     */
+    Novelist findByName(String name);
+
+    /**
+     * 修改小说家存款余额
+     *
+     * @param novelist
+     */
+    void updateNovelistMoney(Novelist novelist);
 
 //    /**
 //     * 根据id查询记录

@@ -4,6 +4,7 @@ import cn.dbdj1201.mistake.domain.Novel;
 import cn.dbdj1201.mistake.domain.Novelist;
 import cn.dbdj1201.mistake.domain.QueryVo;
 import cn.dbdj1201.mistake.mapper.INovelistMapper;
+import cn.dbdj1201.mistake.utils.ConnectionUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -12,6 +13,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -35,8 +37,11 @@ public class INovelistMapperImpl implements INovelistMapper {
 //    }
 //
 
-    @Autowired
+    @Resource(name = "runner")
     private QueryRunner runner;
+
+    @Resource(name = "connUtils")
+    private ConnectionUtils connUtils;
 
     public void setRunner(QueryRunner runner) {
         this.runner = runner;
@@ -61,6 +66,34 @@ public class INovelistMapperImpl implements INovelistMapper {
         try {
             runner.update("insert into novelist(nname, lifetime, novel, address) values(?, ?, ?, ?)",
                     novelist.getNname(), novelist.getLifetime(), novelist.getNovel(), novelist.getAddress());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public Novelist findByName(String name) {
+        List<Novelist> novelists = null;
+        try {
+            novelists = runner.query(connUtils.getThreadConnection(), "select * from novelist where nname = ? ", new BeanListHandler<>(Novelist.class), name);
+            if (novelists == null || novelists.size() < 1) {
+                return null;
+            }
+            if (novelists.size() > 1) {
+                throw new RuntimeException("咋有俩一样的人？出问题了");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        assert novelists != null;
+        return novelists.get(0);
+    }
+
+    @Override
+    public void updateNovelistMoney(Novelist novelist) {
+        try {
+            int rows = runner.update(connUtils.getThreadConnection(), "update novelist set money = ? where nname = ?", novelist.getMoney(), novelist.getNname());
+            System.out.println("rows: " + rows);
         } catch (SQLException e) {
             e.printStackTrace();
         }

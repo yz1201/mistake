@@ -13,9 +13,25 @@ import java.util.List;
 public interface INovelistService {
 
     /**
+     * 查询所有
+     *
      * @return
      */
     List<Novelist> findAll();
 
+    /**
+     * 保存信息
+     *
+     * @param novelist
+     */
     void saveOne(Novelist novelist);
+
+    /**
+     * 借钱业务
+     *
+     * @param src   被借方
+     * @param dest  借方
+     * @param money 涉及金额
+     */
+    void borrow(String src, String dest, int money);
 }
