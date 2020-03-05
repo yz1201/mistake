@@ -2,6 +2,7 @@ package cn.dbdj1201.mistake.service;
 
 import cn.dbdj1201.mistake.domain.Novel;
 import cn.dbdj1201.mistake.domain.Novelist;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -1,9 +1,7 @@
-package cn.dbdj1201.mistake.service.impl;
+package cn.dbdj1201.mistake.bean;
 
 import cn.dbdj1201.mistake.service.INovelistService;
 import config.SpringConfiguration;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,37 +14,17 @@ import static org.junit.Assert.*;
 
 /**
  * @author tyz1201
- * @datetime 2020-03-04 15:59
+ * @datetime 2020-03-05 9:12
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfiguration.class)
-public class INovelistServiceImplTest {
+public class BeanFactoryForServiceTest {
 
     @Resource(name = "proxyNovelistService")
     private INovelistService service;
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
     @Test
-    public void setNovelistMapper() {
-    }
-
-    @Test
-    public void findAll() {
-    }
-
-    @Test
-    public void saveOne() {
-    }
-
-    @Test
-    public void borrow() {
-        service.borrow("曹雪芹","罗贯中",1000);
+    public void getiNovelistService() {
+        service.borrow("曹雪芹","罗贯中",100000);
     }
 }

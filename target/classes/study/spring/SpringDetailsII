@@ -1,1 +1,88 @@
-spring中的事务控制，应该集中在业务层。看utils包下ConnectionUtils
+事务控制，应该集中在业务层。看utils包下ConnectionUtils跟TransactionManager
+通过ThreadLocal控制Connection，从而控制事务。将自动提交改为手动，对事务的提交，回滚，关闭进行封装。
+动态代理： see details in proxy || cglib
+    特点--》字节码随用随创建，随用随加载。
+    作用：不改源码的基础上对方法增强。
+    分类：
+        利用接口的动态代理：Proxy.newProxyInstance(classloader,interfaces[],new InvocationHandler(proxy,method,args)) 需同样接口，只用jdk即可。
+            classloader是类加载器，用于加载代理对象字节码的，和被代理对象使用相同的类加载器即可。
+            class[]，字节码数组，让代理对象跟被代理对象有相同方法
+            InvocationHandler 提供增强的代码
+                一般都是匿名内部类。它的三个参数，代理对象，当前方法，当前方法参数
+
+        利用子类的动态代理：Cglib动态代理：cglib代理
+            用第三方类库cglib中的Enhancer类，create方法，被代理类不能被final修饰对吧？
+            create方法参数，
+                Class type 字节码，用于指定被代理对象的字节码
+                Callback（） 提供增强代码，它是让我们写如何代理，一般是提供该接口的实现类，一般也是匿名内部类。
+                一般写的是该接口的子接口，MethodInterceptor()
+
+使用动态代理进行事务控制？参见factory/BeanFactoryForService 注意注解配置代理对象，放进容器使用，或者bean.xml配置，工厂方法，的bean配置，学会使用
+factory-bean跟factory-method属性。
+
+Spring中的AOP 就是用配置的方式，进行方法增强。主攻事务管理。
+相关：
+    Joinpoint，连接点-就是被拦截到的点，spring中只支持方法类型的连接点。eg：INovelist中的所有方法。
+    PointCut， 切入点-指我们要对那些JoinPoint进行拦截的定义。切入点，就是要被拦截添加事务的方法。
+    Advice（通知/增强）
+        所谓通知就是指拦截到连接点之后要做的事情
+        通知类型有：前置通知，后置通知，异常通知，最终通知，环绕通知。
+            前置通知就是方法调用前的处理，后置是方法调用后的处理。就是方法调用前后对方法的处理位置的分类
+            异常通知是异常处的处理，最终通知就是finally块的处理，环绕通知就是整个invoke方法执行，在环绕通知中有明确的切入点方法调用。
+    Introduction 引介：是一种特殊的通知，在不修改类代码的前提下，introduction可以在运行期为类动态的添加一些方法或者field。
+    Target 目标对象：代理的目标对象。
+    Weaving 织入：指把增强应用到目标对象来创建新的代理对象的过程，spring采用动态代理织入，而AspectJ采用编译器织入，跟类装载器织入。
+    Proxy代理，一个类被AOP织入增强后，就产生一个结果代理类。
+    Aspect 切面，就是切入点跟通知(引介)的结合。
+
+    a、开发阶段（我们做的）
+    编写核心业务代码（开发主线）：大部分程序员来做，要求熟悉业务需求。
+    把公用代码抽取出来，制作成通知。（开发阶段最后再做）：AOP 编程人员来做。
+    在配置文件中，声明切入点与通知间的关系，即切面。：AOP 编程人员来做。
+    b、运行阶段（Spring 框架完成的）
+    Spring 框架监控切入点方法的执行。一旦监控到切入点方法被运行，使用代理机制，动态创建目标对
+    象的代理对象，根据通知类别，在代理对象的对应位置，将通知对应的功能织入，完成完整的代码逻辑运行。
+
+<!--spring中基于XML的AOP配置步骤
+        1、把通知Bean也交给spring来管理
+        2、使用aop:config标签表明开始AOP的配置
+        3、使用aop:aspect标签表明配置切面
+                id属性：是给切面提供一个唯一标识
+                ref属性：是指定通知类bean的Id。
+        4、在aop:aspect标签的内部使用对应标签来配置通知的类型
+               我们现在示例是让printLog方法在切入点方法执行之前之前：所以是前置通知
+               aop:before：表示配置前置通知
+                    method属性：用于指定Logger类中哪个方法是前置通知
+                    pointcut属性：用于指定切入点表达式，该表达式的含义指的是对业务层中哪些方法增强
+
+            切入点表达式的写法：
+                关键字：execution(表达式)
+                表达式：
+                    访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)
+                标准的表达式写法：
+                    public void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                访问修饰符可以省略
+                    void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                返回值可以使用通配符，表示任意返回值
+                    * com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                包名可以使用通配符，表示任意包。但是有几级包，就需要写几个*.
+                    * *.*.*.*.AccountServiceImpl.saveAccount())
+                包名可以使用..表示当前包及其子包
+                    * *..AccountServiceImpl.saveAccount()
+                类名和方法名都可以使用*来实现通配
+                    * *..*.*()
+                参数列表：
+                    可以直接写数据类型：
+                        基本类型直接写名称           int
+                        引用类型写包名.类名的方式   java.lang.String
+                    可以使用通配符表示任意类型，但是必须有参数
+                    可以使用..表示有无参数均可，有参数可以是任意类型
+                全通配写法：
+                    * *..*.*(..)
+
+                实际开发中切入点表达式的通常写法：
+                    切到业务层实现类下的所有方法
+                        * com.itheima.service.impl.*.*(..)
+    -->
+
+
