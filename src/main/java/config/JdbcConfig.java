@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.util.Objects;
@@ -30,6 +31,12 @@ public class JdbcConfig {
     @Scope("prototype")
     public QueryRunner createQueryRunner(DataSource dataSource) {
         return new QueryRunner(dataSource);
+    }
+
+    @Bean("jdbcTemplate")
+    @Scope("prototype")
+    public JdbcTemplate createJdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
     }
 
     @Bean("dataSource")

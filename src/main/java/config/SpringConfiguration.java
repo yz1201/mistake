@@ -2,6 +2,7 @@ package config;
 
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 
@@ -10,9 +11,10 @@ import org.springframework.context.annotation.PropertySource;
  * @datetime 2020-03-04 3:42
  * spring新注解Configuration
  **/
-@ComponentScan("cn.dbdj1201.mistake")
+@ComponentScan("cn.dbdj1201")
 @Import(JdbcConfig.class)
 @PropertySource("classpath:jdbcConfig.properties")
+@EnableAspectJAutoProxy
 public class SpringConfiguration {
 
 }

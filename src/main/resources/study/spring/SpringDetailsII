@@ -22,7 +22,7 @@ factory-bean跟factory-method属性。
 
 Spring中的AOP 就是用配置的方式，进行方法增强。主攻事务管理。
 相关：
-    Joinpoint，连接点-就是被拦截到的点，spring中只支持方法类型的连接点。eg：INovelist中的所有方法。
+    Joinoint，连接点-就是被拦截到的点，spring中只支持方法类型的连接点。eg：INovelist中的所有方法。
     PointCut， 切入点-指我们要对那些JoinPoint进行拦截的定义。切入点，就是要被拦截添加事务的方法。
     Advice（通知/增强）
         所谓通知就是指拦截到连接点之后要做的事情
@@ -84,5 +84,38 @@ Spring中的AOP 就是用配置的方式，进行方法增强。主攻事务管�
                     切到业务层实现类下的所有方法
                         * com.itheima.service.impl.*.*(..)
     -->
+
+
+<!--配置AOP-->
+<aop:config>
+    <!-- 配置切入点表达式 id属性用于指定表达式的唯一标识。expression属性用于指定表达式内容
+          此标签写在aop:aspect标签内部只能当前切面使用。
+          它还可以写在aop:aspect外面，此时就变成了所有切面可用
+      -->
+    <aop:pointcut id="pt1" expression="execution(* com.itheima.service.impl.*.*(..))"></aop:pointcut>
+    <!--配置切面 -->
+    <aop:aspect id="logAdvice" ref="logger">
+        <!-- 配置前置通知：在切入点方法执行之前执行
+        <aop:before method="beforePrintLog" pointcut-ref="pt1" ></aop:before>-->
+
+        <!-- 配置后置通知：在切入点方法正常执行之后值。它和异常通知永远只能执行一个
+        <aop:after-returning method="afterReturningPrintLog" pointcut-ref="pt1"></aop:after-returning>-->
+
+        <!-- 配置异常通知：在切入点方法执行产生异常之后执行。它和后置通知永远只能执行一个
+        <aop:after-throwing method="afterThrowingPrintLog" pointcut-ref="pt1"></aop:after-throwing>-->
+
+        <!-- 配置最终通知：无论切入点方法是否正常执行它都会在其后面执行
+        <aop:after method="afterPrintLog" pointcut-ref="pt1"></aop:after>-->
+
+        <!-- 配置环绕通知 详细的注释请看Logger类中-->
+        <aop:around method="aroundPringLog" pointcut-ref="pt1"></aop:around>
+    </aop:aspect>
+</aop:config>
+环绕通知
+    配置了环绕通知之后，切入点方法没执行，通知执行了？why，跟动态代理实现环绕相比，其环绕通知中有业务层代码的调用。
+    如何解决?spring框架提供了ProceedingJoinPoint接口，该接口有一个方法proceed（），这个方法就相当于明确调用切入点方法
+    该接口可以作为环绕通知的方法参数，在程序中执行时，spring会为我们提供该接口的实现类供我们使用。
+
+    spring环绕通知，是spring框架提供的一种可以在代码中手动控制增强方法何时执行的方式。
 
 

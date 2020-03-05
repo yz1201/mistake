@@ -2,10 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
 
     <!--    <bean id="novelistService" class="cn.dbdj1201.mistake.service.impl.INovelistServiceImpl">-->
@@ -72,22 +75,37 @@
                     切到业务层实现类下的所有方法
                         * com.itheima.service.impl.*.*(..)
     -->
+    <context:component-scan base-package="cn.dbdj1201.mistake"/>
+    <!-- 配置spring开启注解AOP的支持 -->
+    <aop:aspectj-autoproxy/>
 
     <!-- 配置Logger类 -->
-    <bean id="logger" class="cn.dbdj1201.mistake.utils.Logger"/>
+<!--    <bean id="logger" class="cn.dbdj1201.mistake.utils.Logger"/>-->
 
     <!--配置AOP-->
-    <aop:config>
-        <!--配置切面 -->
-        <aop:aspect id="logAdvice" ref="logger">
-            <aop:pointcut id="aService" expression="execution(* cn.dbdj1201.mistake.service.impl.*.*(..))"/>
-            <!-- 配置通知的类型，并且建立通知方法和切入点方法的关联-->
-            <aop:before method="printLogBefore" pointcut-ref="aService"/>
-            <aop:after-returning method="printLogAfterReturning" pointcut-ref="aService"/>
-            <aop:after method="printLogAfter" pointcut-ref="aService"/>
-            <aop:after-throwing method="printLogException" pointcut-ref="aService"/>
-        </aop:aspect>
-    </aop:config>
+<!--    <aop:config>-->
+    <!--        &lt;!&ndash;配置切面 &ndash;&gt;-->
+    <!--        <aop:aspect id="logAdvice" ref="logger">-->
+    <!--            <aop:pointcut id="aService" expression="execution(* cn.dbdj1201.mistake.service.impl.*.*(..))"/>-->
+    <!--            &lt;!&ndash; 配置通知的类型，并且建立通知方法和切入点方法的关联&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <aop:before method="printLogBefore" pointcut-ref="aService"/>&ndash;&gt;-->
+    <!--            &lt;!&ndash;切入点方法正常执行之后才会执行此方法，有异常不会执行&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <aop:after-returning method="printLogAfterReturning" pointcut-ref="aService"/>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <aop:after method="printLogAfter" pointcut-ref="aService"/>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <aop:after-throwing method="printLogException" pointcut-ref="aService"/>&ndash;&gt;-->
+    <!--            <aop:around method="printLogAround" pointcut-ref="aService"/>-->
+    <!--        </aop:aspect>-->
+    <!--    </aop:config>-->
 
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql:///db_mybatis"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
 
 </beans>

@@ -1,0 +1,13 @@
+1，Spring中的JdbcTemplate
+    JdbcTemplate作用：用于跟数据库交互，实现CRUD
+    对象创建：new JdbcTemplate(DataSource ds);
+    常用方法：
+        query();
+        update();
+
+
+2，Spring基于AOP的事务控制实例
+3，Spring中的事务控制：
+    基于XML的   ClasspathXMLApplicationContext()
+
+    基于注解的   AnnotationConfigApplicationContext();
