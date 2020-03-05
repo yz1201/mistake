@@ -45,6 +45,8 @@ public class IAccountDaoImplTest {
 
     @Test
     public void findByName() {
+        System.out.println(accountDao.findByName("test1"));
+
     }
 
     @Test

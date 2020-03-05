@@ -8,6 +8,61 @@
 
 2，Spring基于AOP的事务控制实例
 3，Spring中的事务控制：
-    基于XML的   ClasspathXMLApplicationContext()
+用到的api介绍
+            接口 PlatformTransactionManager
+                  实现类：
+                      真正管理事务的对象
+                      org.springframework.jdbc.datasource.DataSourceTransactionManager 使用 Spring JDBC 或 iBatis 进行持久化数据时使用
+                      org.springframework.orm.hibernate5.HibernateTransactionManager 使用 Hibernate 版本进行持久化数据时使用
+            该接口提供事务操作的方法，包含三个具体的操作：
+                获取事务状态信息：TransactionStatus getTransaction(TransactionDefinition definition)
+                提交事务：void commit(TransactionStatus status)
+                事务回滚：void rollback(TransactionStatus status)
 
-    基于注解的   AnnotationConfigApplicationContext();
+            TransactionDefinition是事务定义信息，常用方法结构：
+                String getName();                   事务名称
+                int getIsolationLevel();            隔离级别 默认，read uncommitted read committed read repeated 串行化 serialization （mysql中默认可重复读，Oracle默认读已提交）
+                int getPropagationBehavior()        获取事务传播行为？
+                        事务的传播性为分类：
+                            REQUIRED:如果当前没有事务，就新建一个事务，若已存在一个事务，就加入到这个事务中，默认选项。
+                            SUPPORTS：支持当前事务，如果当前没有事务，就抛出异常
+                            REQUERS_NEW:新建事务，如果当前在事务中，把当前事务挂起。
+                            NOT_SUPPORTED:以非事务方式执行操作，如果当前存在事务，就把当前事务挂起
+                            NEVER:以非事务方式运行，如果当前存在事务，抛出异常
+                            NESTED:如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行 REQUIRED 类似的操作。
+                int getTimeout()
+                        默认值是-1，没有超时限制。如果有，以秒为单位进行设置
+                boolean isReadOnly() 查询时设置只读，其他时候需要设置读写
+            TransactionStatus:该接口描述了某个时间点上事务对象的状态信息。方法结果如下：
+                        void flush();                   刷新事务
+                        boolean hasSavePoint()          是否存在保存点？
+                        boolean isCompleted()           获取事务是否完成
+                        boolean isNewTransaction()      是不是新事务
+                        boolean isRollbackOnly()        获取事务是否回滚
+                        void setRollbackOnly()          设置事务回滚
+    基于 XML 的声明式事务控制（配置方式）重点
+        <!-- spring中基于XML的声明式事务控制配置步骤
+                1、配置事务管理器
+                2、配置事务的通知
+                        此时我们需要导入事务的约束 tx名称空间和约束，同时也需要aop的
+                        使用tx:advice标签配置事务通知
+                            属性：
+                                id：给事务通知起一个唯一标识
+                                transaction-manager：给事务通知提供一个事务管理器引用
+                3、配置AOP中的通用切入点表达式
+                4、建立事务通知和切入点表达式的对应关系
+                5、配置事务的属性
+                       是在事务的通知tx:advice标签的内部
+                             isolation 指定事务隔离级别，默认mysql可重复读
+                             propagation 指定事务传播性为，默认值是REQUIRED，表示一定会有事务，增删改的选择，查询方法可以选择SUPPORTS
+                             read-only      是否只读，只有查询方法才能设置true，默认是false，为读写。
+                             rollback-for=""       用于指定一个异常，当产生该异常时，事务回滚，产生其他异常时，事务不回滚，无默认值时，表示有异常就回滚。
+                             no-rollback-for=""    用于指定一个异常，该异常触发时不回滚，产生其他异常正常回滚，无默认值时也是任何异常都回滚。
+                             timeout    指定事务超时时间，默认值-1，表示永不超时，单位s
+          -->
+
+    基于注解的 的声明式事务控制（配置方式）重点
+        spring中基于注解 的声明式事务控制配置步骤
+        1、配置事务管理器
+        2、开启spring对注解事务的支持
+        3、在需要事务支持的地方使用@Transactional注解
